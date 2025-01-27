@@ -1,0 +1,121 @@
+Original Order,AE_Terms,Subgroup
+1,Blood pressure measurement,Test or measurement
+2,Blood test,Test or measurement
+3,Body temperature,Other
+4,Chest X-ray,Test or measurement
+5,Computerised tomogram,Other
+6,COVID-19,Other
+7,Echocardiogram,Other
+8,Electrocardiogram,Other
+9,Electrocardiogram normal,Other
+10,Exposure to SARS-CoV-2,Other
+11,Feeling abnormal,Other
+12,Heart rate,Other
+13,Influenza virus test negative,Test or measurement
+14,Interchange of vaccine products,Administrative error or changes
+15,Investigation,Other
+16,Magnetic resonance imaging,Test or measurement
+17,Metabolic function test,Test or measurement
+18,Off label use,Other
+19,Product preparation issue,Administrative error or changes
+20,SARS-CoV-2 antibody test,Test or measurement
+21,SARS-CoV-2 test,Test or measurement
+22,SARS-CoV-2 test negative,Test or measurement
+23,SARS-CoV-2 test positive,Test or measurement
+24,Vital signs measurement,Test or measurement
+25,Weight,Other
+26,Poor quality product administered,Administrative error or changes
+27,Product temperature excursion issue,Administrative error or changes
+28,Syringe issue,Administrative error or changes
+29,Underdose,Administrative error or changes
+30,Angiogram pulmonary abnormal,Other
+31,Computerised tomogram head abnormal,Other
+32,Computerised tomogram thorax abnormal,Other
+33,Fibrin D dimer,Other
+34,Laboratory test,Test or measurement
+35,Magnetic resonance imaging head,Test or measurement
+36,Magnetic resonance imaging head abnormal,Test or measurement
+37,Platelet count normal,Test or measurement
+38,Ultrasound Doppler abnormal,Test or measurement
+39,Ultrasound scan,Test or measurement
+40,Ultrasound scan abnormal,Test or measurement
+41,Echocardiogram normal,Other
+42,Electrocardiogram abnormal,Other
+43,Antibody test,Test or measurement
+44,Computerised tomogram head normal,Other
+45,Suspected COVID-19,Other
+46,Product preparation error,Administrative error or changes
+47,Vaccine breakthrough infection,Other
+48,Product dose omission issue,Administrative error or changes
+49,Vaccination complication,Other
+50,Vaccination site reaction,Other
+51,Blood test normal,Test or measurement
+52,Magnetic resonance imaging head normal,Test or measurement
+53,Magnetic resonance imaging normal,Test or measurement
+54,Vaccination failure,Administrative error or changes
+55,Echocardiogram abnormal,Other
+56,Immunisation,Other
+57,Incorrect product formulation administered,Administrative error or changes
+58,Expired product administered,Administrative error or changes
+59,Cardiac stress test,Test or measurement
+60,Immunisation reaction,Other
+61,Therapeutic response unexpected,Other
+62,Accidental underdose,Administrative error or changes
+63,Blood alkaline phosphatase normal,Test or measurement
+64,Blood chloride normal,Test or measurement
+65,Blood creatinine normal,Test or measurement
+66,Blood culture negative,Test or measurement
+67,Blood potassium normal,Test or measurement
+68,Blood sodium normal,Test or measurement
+69,Chest X-ray abnormal,Test or measurement
+70,Computerised tomogram abdomen abnormal,Other
+71,Glomerular filtration rate normal,Other
+72,Haemoglobin normal,Other
+73,Imaging procedure,Test or measurement
+74,Influenza B virus test,Test or measurement
+75,Laboratory test abnormal,Test or measurement
+76,Mean cell volume normal,Other
+77,Physical examination,Test or measurement
+78,Scan with contrast abnormal,Test or measurement
+79,Troponin normal,Test or measurement
+80,Ultrasound Doppler normal,Test or measurement
+81,White blood cell count normal,Test or measurement
+82,Biopsy colon abnormal,Test or measurement
+83,Blood phosphorus normal,Test or measurement
+84,Cytokine test,Test or measurement
+85,Heavy metal test,Test or measurement
+86,Intraocular pressure test normal,Test or measurement
+87,Retinogram normal,Test or measurement
+88,Sputum abnormal,Test or measurement
+89,Synovial fluid analysis abnormal,Test or measurement
+90,Thinking abnormal,Other
+91,Toxicologic test,Test or measurement
+92,Blood test abnormal,Test or measurement
+93,Discontinued product administered,Administrative error or changes
+94,Incorrect dose administered,Administrative error or changes
+95,No adverse event,Other
+96,Respiratory syncytial virus test negative,Test or measurement
+97,Streptococcus test negative,Test or measurement
+98,Chest X-ray normal,Test or measurement
+99,Computerised tomogram abnormal,Other
+100,Product storage error,Administrative error or changes
+101,Urine analysis abnormal,Test or measurement
+102,Urine analysis normal,Test or measurement
+103,Vaccination error,Administrative error or changes
+104,Biopsy lymph gland abnormal,Test or measurement
+105,Blood thyroid stimulating hormone normal,Test or measurement
+106,Extra dose administered,Administrative error or changes
+107,Oestrogen receptor assay negative,Test or measurement
+108,Prostatic specific antigen,Test or measurement
+109,Skin odour abnormal,Other
+110,Streptococcus test,Test or measurement
+111,Stress echocardiogram,Other
+112,Therapy change,Other
+113,Tilt table test,Test or measurement
+114,Urine antigen test,Test or measurement
+115,Urine uric acid normal,Test or measurement
+116,Wrong product administered,Administrative error or changes
+117,Cardiac monitoring,Test or measurement
+118,Influenza A virus test negative,Test or measurement
+119,Product administration error,Administrative error or changes
+120,X-ray normal,Test or measurement

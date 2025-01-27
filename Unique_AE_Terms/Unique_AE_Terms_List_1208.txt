@@ -1,0 +1,535 @@
+AE_Terms	Flag	SubgroupDescription
+Accidental overdose	1	Administrative
+Accidental underdose	1	Administrative
+Circumstance or information capable of leading to medication error	1	Administrative
+Discontinued product administered	1	Administrative
+Expired product administered	1	Administrative
+Extra dose administered	1	Administrative
+Inappropriate schedule of product administration	1	Administrative
+Incorrect dose administered	1	Administrative
+Incorrect product formulation administered	1	Administrative
+Insurance issue	1	Administrative
+Interchange of vaccine products	1	Administrative
+Poor quality product administered	1	Administrative
+Product administered to patient of inappropriate age	1	Administrative
+Product administration error	1	Administrative
+Product dose omission issue	1	Administrative
+Product preparation error	1	Administrative
+Product preparation issue	1	Administrative
+Product storage error	1	Administrative
+Product temperature excursion issue	1	Administrative
+Syringe issue	1	Administrative
+Underdose	1	Administrative
+Vaccination error	1	Administrative
+Wrong product administered	1	Administrative
+Asymptomatic COVID-19	1	Not Relevant
+Breakthrough COVID-19	1	Not Relevant
+COVID-19	1	Not Relevant
+COVID-19 immunisation	1	Not Relevant
+COVID-19 pneumonia	1	Not Relevant
+Drug ineffective	1	Not relevant
+Exposure to SARS-CoV-2	1	Not Relevant
+Immunisation	1	Not Relevant
+Investigation	1	Not Relevant
+Maternal exposure during pregnancy	1	Not relevant
+Miosis	1	Not relevant
+No adverse event	1	Not Relevant
+Off label use	1	Not Relevant
+Suspected COVID-19	1	Not Relevant
+Therapy non-responder	1	Not relevant
+Vaccine breakthrough infection	1	Not Relevant
+Acoustic stimulation tests	1	Test
+Angiocardiogram	1	Test
+Angiogram	1	Test
+Anion gap	1	Test
+Antibody test	1	Test
+Antinuclear antibody	1	Test
+Biopsy	1	Test
+Biopsy colon abnormal	1	Test
+Biopsy rectum	1	Test
+Blood alkaline phosphatase normal	1	Test
+Blood chloride normal	1	Test
+Blood creatinine	1	Test
+Blood creatinine normal	1	Test
+Blood culture negative	1	Test
+Blood glucose	1	Test
+Blood lactic acid	1	Test
+Blood phosphorus normal	1	Test
+Blood potassium normal	1	Test
+Blood pressure measurement	1	Test
+Blood sodium normal	1	Test
+Blood test	1	Test
+Blood test abnormal	1	Test
+Blood test normal	1	Test
+Blood testosterone	1	Test
+Blood thyroid stimulating hormone normal	1	Test
+Body temperature	1	Test
+Cardiac monitoring	1	Test
+Cardiac stress test	1	Test
+CHA2DS2-VASc-score	1	Test
+Chest X-ray	1	Test
+Chest X-ray abnormal	1	Test
+Chest X-ray normal	1	Test
+Computerised tomogram	1	Test
+Computerised tomogram abdomen	1	Test
+Computerised tomogram head	1	Test
+Computerised tomogram head normal	1	Test
+Computerised tomogram thorax	1	Test
+C-reactive protein	1	Test
+Cytokine test	1	Test
+Differential white blood cell count	1	Test
+Echocardiogram	1	Test
+Echocardiogram normal	1	Test
+Electrocardiogram	1	Test
+Electrocardiogram normal	1	Test
+Electromyogram	1	Test
+Fibrin D dimer	1	Test
+Full blood count	1	Test
+Glomerular filtration rate normal	1	Test
+Glycosylated haemoglobin	1	Test
+Haemoglobin	1	Test
+Haemoglobin normal	1	Test
+Heart rate	1	Test
+Heavy metal test	1	Test
+Imaging procedure	1	Test
+Influenza A virus test negative	1	Test
+Influenza B virus test	1	Test
+Influenza virus test negative	1	Test
+Interleukin level	1	Test
+Intraocular pressure test normal	1	Test
+Iron binding capacity total	1	Test
+Laboratory test	1	Test
+Laboratory test abnormal	1	Test
+Lung opacity	1	Test
+Magnetic resonance imaging	1	Test
+Magnetic resonance imaging head	1	Test
+Magnetic resonance imaging head normal	1	Test
+Magnetic resonance imaging normal	1	Test
+Mean cell volume normal	1	Test
+Metabolic function test	1	Test
+Nasopharyngeal swab	1	Test
+Oestrogen receptor assay negative	1	Test
+Oxygen saturation	1	Test
+Pancreatic enzymes	1	Test
+Physical examination	1	Test
+Platelet count	1	Test
+Platelet count normal	1	Test
+Positron emission tomogram	1	Test
+Prostatic specific antigen	1	Test
+Respiratory syncytial virus test negative	1	Test
+Retinogram normal	1	Test
+SARS-CoV-2 antibody test	1	Test
+SARS-CoV-2 test	1	Test
+SARS-CoV-2 test negative	1	Test
+SARS-CoV-2 test positive	1	Test
+Scan with contrast	1	Test
+Streptococcus test	1	Test
+Streptococcus test negative	1	Test
+Stress echocardiogram	1	Test
+Symptom recurrence	1	Test
+Tilt table test	1	Test
+Toxicologic test	1	Test
+Troponin	1	Test
+Troponin normal	1	Test
+Troponin T	1	Test
+Ultrasound Doppler	1	Test
+Ultrasound Doppler normal	1	Test
+Ultrasound scan	1	Test
+Urine analysis	1	Test
+Urine analysis normal	1	Test
+Urine antigen test	1	Test
+Urine uric acid normal	1	Test
+Vital signs measurement	1	Test
+Weight	1	Test
+White blood cell count	1	Test
+White blood cell count normal	1	Test
+X-ray normal	1	Test
+Adverse drug reaction	1	Too Broad
+Adverse event	1	Too Broad
+Adverse reaction	1	Too Broad
+Illness	1	Too broad
+Injury	1	Too broad
+Loss of personal independence in daily activities	1	Too Broad
+Surgery	1	Too broad
+Vaccination failure	1	Too Broad
+Anticoagulant therapy	1	Treatment
+Chemotherapy	1	Treatment
+Dialysis	1	Treatment
+Endotracheal intubation	1	Treatment
+Intensive care	1	Treatment
+Positive airway pressure therapy	1	Treatment
+Therapeutic response unexpected	1	Treatment
+Therapy change	1	Treatment
+Hormone replacement therapy	1	Treatment
+Immunisation reaction	0	
+Vaccination complication	0	
+Vaccination site reaction	0	
+Abdominal discomfort	0	
+Abdominal distension	0	
+Abdominal pain	0	
+Abdominal pain upper	0	
+Acute kidney injury	0	
+Acute myocardial infarction	0	
+Acute respiratory failure	0	
+Acute sinusitis	0	
+Affective disorder	0	
+Ageusia	0	
+Agitation	0	
+Alanine aminotransferase increased	0	
+Allergic reaction to excipient	0	
+Allergy to vaccine	0	
+Alopecia	0	
+Amnesia	0	
+Anaemia	0	
+Anaphylactic reaction	0	
+Angina pectoris	0	
+Angiogram pulmonary abnormal	0	
+Anosmia	0	
+Antineutrophil cytoplasmic antibody positive	0	
+Anxiety	0	
+Aphonia	0	
+Arrhythmia	0	
+Arthralgia	0	
+Arthritis reactive	0	
+Atelectasis	0	
+Atrial fibrillation	0	
+Atrial flutter	0	
+Axillary pain	0	
+Back pain	0	
+B-cell lymphoma	0	
+Behaviour disorder	0	
+Bell\'s palsy	0	
+Biopsy lymph gland abnormal	0	
+Blindness	0	
+Blood creatinine increased	0	
+Blood potassium decreased	0	
+Blood pressure increased	0	
+Blood sodium decreased	0	
+Blood testosterone decreased	0	
+Blood urea increased	0	
+Bone pain	0	
+Bradycardia	0	
+Bradyphrenia	0	
+Brain fog	0	
+Breast inflammation	0	
+Breast pain	0	
+Bronchitis	0	
+Burning sensation	0	
+Cardiac arrest	0	
+Cardiac disorder	0	
+Cardiac failure	0	
+Cardiac failure chronic	0	
+Cardiac failure congestive	0	
+Cardiomegaly	0	
+Cardio-respiratory arrest	0	
+Carditis	0	
+Cerebrovascular accident	0	
+Chest discomfort	0	
+Chest pain	0	
+Chillblains	0	
+Chills	0	
+Chronic kidney disease	0	
+Chronic obstructive pulmonary disease	0	
+Chronic respiratory failure	0	
+Cognitive disorder	0	
+Cold sweat	0	
+Compression garment application	0	
+Computerised tomogram abdomen abnormal	0	
+Computerised tomogram abnormal	0	
+Computerised tomogram head abnormal	0	
+Computerised tomogram thorax abnormal	0	
+Condition aggravated	0	
+Confusional state	0	
+Constipation	0	
+Contusion	0	
+Coronary artery disease	0	
+Cough	0	
+C-reactive protein increased	0	
+Cutaneous vasculitis	0	
+Deafness	0	
+Death	0	
+Decreased appetite	0	
+Decreased immune responsiveness	0	
+Deep vein thrombosis	0	
+Dehydration	0	
+Depression	0	
+Diabetic ketoacidosis	0	
+Diastolic dysfunction	0	
+Diffuse large B-cell lymphoma	0	
+Diplopia	0	
+Disorientation	0	
+Disturbance in attention	0	
+Disturbance in sexual arousal	0	
+Dizziness	0	
+Dry mouth	0	
+Dysarthria	0	
+Dysgeusia	0	
+Dyslipidaemia	0	
+Dysmenorrhoea	0	
+Dyspepsia	0	
+Dysphagia	0	
+Dysphonia	0	
+Dyspnoea	0	
+Dyspnoea exertional	0	
+Dysstasia	0	
+Ear discomfort	0	
+Ear pain	0	
+Echocardiogram abnormal	0	
+Electrocardiogram abnormal	0	
+Encephalopathy	0	
+Endometrial cancer	0	
+Endometrial thickening	0	
+Epistaxis	0	
+Exercise tolerance decreased	0	
+Extradural abscess	0	
+Extrasystoles	0	
+Eye pain	0	
+Eye pruritus	0	
+Facial nerve disorder	0	
+Facial pain	0	
+Facial paralysis	0	
+Fatigue	0	
+Feeling abnormal	0	
+Feeling cold	0	
+Feeling of body temperature change	0	
+Feeling of despair	0	
+Fibrin D dimer increased	0	
+Flank pain	0	
+Flushing	0	
+Foetal exposure during pregnancy	0	
+Foreign body in gastrointestinal tract	0	
+Gait inability	0	
+Gallbladder disorder	0	
+General physical health deterioration	0	
+Genital hypoaesthesia	0	
+Glassy eyes	0	
+Glomerulonephritis membranous	0	
+Glycosylated haemoglobin increased	0	
+Guillain-Barre syndrome	0	
+Haemoglobin decreased	0	
+Haemoptysis	0	
+Hallucination	0	
+Head discomfort	0	
+Head injury	0	
+Headache	0	
+Heart rate decreased	0	
+Heart rate increased	0	
+Heart rate irregular	0	
+Heavy menstrual bleeding	0	
+Hemiparesis	0	
+Hot flush	0	
+Hydrocele	0	
+Hyperglycaemia	0	
+Hyperhidrosis	0	
+Hypersomnia	0	
+Hypertension	0	
+Hypoacusis	0	
+Hypoaesthesia	0	
+Hypoaesthesia oral	0	
+Hypokalaemia	0	
+Hyponatraemia	0	
+Hypophagia	0	
+Hypotension	0	
+Hypoxia	0	
+IIIrd nerve paralysis	0	
+Immediate post-injection reaction	0	
+Impaired gastric emptying	0	
+Impaired work ability	0	
+Implantable cardiac monitor insertion	0	
+Inflammation	0	
+Inflammatory marker increased	0	
+Influenza like illness	0	
+Infusion site reaction	0	
+Injection site bruising	0	
+Injection site discomfort	0	
+Injection site haemorrhage	0	
+Injection site hypoaesthesia	0	
+Injection site pain	0	
+Injection site pruritus	0	
+Injection site rash	0	
+Insomnia	0	
+Intermenstrual bleeding	0	
+Internal haemorrhage	0	
+Intervertebral disc operation	0	
+Ischaemic stroke	0	
+Joint warmth	0	
+Leukocytosis	0	
+Limb discomfort	0	
+Lip swelling	0	
+Loss of consciousness	0	
+Lung disorder	0	
+Lung infiltration	0	
+Lymph node pain	0	
+Lymphadenopathy	0	
+Magnetic resonance imaging head abnormal	0	
+Mast cell activation syndrome	0	
+Mechanical urticaria	0	
+Mechanical ventilation	0	
+Menstrual disorder	0	
+Menstruation irregular	0	
+Mental impairment	0	
+Mental status changes	0	
+Mesenteric panniculitis	0	
+Metabolic encephalopathy	0	
+Migraine	0	
+Movement disorder	0	
+Muscle atrophy	0	
+Muscle spasms	0	
+Muscle tightness	0	
+Muscle twitching	0	
+Musculoskeletal discomfort	0	
+Myalgia	0	
+Myocardial infarction	0	
+Myocarditis	0	
+Nasal congestion	0	
+Nasopharyngitis	0	
+Nausea	0	
+Neoplasm malignant	0	
+Nervous system disorder	0	
+Nervousness	0	
+Neurological symptom	0	
+Neuropathy peripheral	0	
+Night sweats	0	
+Obstructive sleep apnoea syndrome	0	
+Ocular discomfort	0	
+Oedema	0	
+Oropharyngeal discomfort	0	
+Oropharyngeal pain	0	
+Oxygen saturation decreased	0	
+Paediatric acute-onset neuropsychiatric syndrome	0	
+Pain	0	
+Pain in extremity	0	
+Pain in jaw	0	
+Pain of skin	0	
+Painful respiration	0	
+Palpitations	0	
+Panic attack	0	
+Panniculitis	0	
+Paraesthesia	0	
+Paraesthesia oral	0	
+Paralysis	0	
+Paranasal sinus discomfort	0	
+Paranasal sinus hypersecretion	0	
+Parosmia	0	
+Perfume sensitivity	0	
+Pericarditis	0	
+Peripheral coldness	0	
+Peripheral paralysis	0	
+Peripheral swelling	0	
+Pharyngeal paraesthesia	0	
+Pharyngeal swelling	0	
+Phonophobia	0	
+Photophobia	0	
+Plantar fasciitis	0	
+Platelet count decreased	0	
+Pleural effusion	0	
+Pneumonia	0	
+Pneumonia bacterial	0	
+Pneumonia streptococcal	0	
+Polypectomy	0	
+Polyuria	0	
+Post viral fatigue syndrome	0	
+Postural orthostatic tachycardia syndrome	0	
+Presyncope	0	
+Procalcitonin	0	
+Productive cough	0	
+Prostate cancer	0	
+Psoriasis	0	
+Pulmonary alveolar haemorrhage	0	
+Pulmonary embolism	0	
+Pulmonary mass	0	
+Pulmonary thrombosis	0	
+Rash erythematous	0	
+Rash macular	0	
+Rash pruritic	0	
+Reading disorder	0	
+Red blood cell sedimentation rate increased	0	
+Renal failure	0	
+Renal impairment	0	
+Respiratory distress	0	
+Respiratory failure	0	
+Respiratory symptom	0	
+Respiratory tract congestion	0	
+Resuscitation	0	
+Retching	0	
+Rhinorrhoea	0	
+Sacral pain	0	
+Scan with contrast abnormal	0	
+Secretion discharge	0	
+Seizure	0	
+Sensation of foreign body	0	
+Sensitive skin	0	
+Sensory disturbance	0	
+Sepsis	0	
+Septic shock	0	
+Sexual dysfunction	0	
+Sinus arrhythmia	0	
+Sinus congestion	0	
+Sinus disorder	0	
+Sinus tachycardia	0	
+Sinusitis	0	
+Skin burning sensation	0	
+Skin erosion	0	
+Skin odour abnormal	0	
+Skin reaction	0	
+Sleep disorder	0	
+Sneezing	0	
+Snoring	0	
+Somnolence	0	
+Spinal claudication	0	
+Spinal cord abscess	0	
+Spinal cord compression	0	
+Spinal decompression	0	
+Spinal fusion surgery	0	
+Sputum abnormal	0	
+Sputum discoloured	0	
+Suicidal ideation	0	
+Swelling face	0	
+Swelling of eyelid	0	
+Swollen tongue	0	
+Syncope	0	
+Synovial cyst	0	
+Synovial fluid analysis abnormal	0	
+Systemic lupus erythematosus	0	
+Tachycardia	0	
+Tachypnoea	0	
+Taste disorder	0	
+Terminal insomnia	0	
+Thinking abnormal	0	
+Thirst	0	
+Throat irritation	0	
+Throat tightness	0	
+Thrombocytopenia	0	
+Thrombosis	0	
+Thyroid disorder	0	
+Time perception altered	0	
+Tinnitus	0	
+Tooth loss	0	
+Transient ischaemic attack	0	
+Tremor	0	
+Troponin increased	0	
+Ultrasound Doppler abnormal	0	
+Ultrasound scan abnormal	0	
+Unresponsive to stimuli	0	
+Upper-airway cough syndrome	0	
+Urinary incontinence	0	
+Urine analysis abnormal	0	
+Uterine disorder	0	
+Vaccination site erythema	0	
+Vaccination site induration	0	
+Vaccination site mass	0	
+Vaccination site pain	0	
+Vaccination site pruritus	0	
+Vaccination site rash	0	
+Vaccination site swelling	0	
+Vaccination site warmth	0	
+Vaginal haemorrhage	0	
+Vertigo	0	
+Vision blurred	0	
+Visual impairment	0	
+Visual snow syndrome	0	
+Vocal cord disorder	0	
+Weight decreased	0	
+Weight increased	0	
+White blood cell count decreased	0	
+White blood cell count increased	0	
