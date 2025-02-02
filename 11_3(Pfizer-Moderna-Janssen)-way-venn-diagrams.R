@@ -100,10 +100,10 @@ process_venn_diagrams <- function(file_path, prefix, vaccines) {
 
 # Define file paths
 files <- list(
-  trimmed_OUTPUT6 = file.path(base_dir, "trimmed_excel_output", "OUTPUT6.xlsx"),
-  trimmed_OUTPUT9 = file.path(base_dir, "trimmed_excel_output", "OUTPUT9.xlsx"),
-  regular_OUTPUT6 = file.path(base_dir, "excel_output", "OUTPUT6.xlsx"),
-  regular_OUTPUT9 = file.path(base_dir, "excel_output", "OUTPUT9.xlsx")
+  Trimmed_OUTPUT6 = file.path(base_dir, "trimmed_excel_output", "OUTPUT6.xlsx"),
+  Trimmed_OUTPUT9 = file.path(base_dir, "trimmed_excel_output", "OUTPUT9.xlsx"),
+  NonTrimmed_OUTPUT6 = file.path(base_dir, "excel_output", "OUTPUT6.xlsx"),
+  NonTrimmed_OUTPUT9 = file.path(base_dir, "excel_output", "OUTPUT9.xlsx")
 )
 
 # Process each file

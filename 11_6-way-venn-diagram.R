@@ -742,7 +742,7 @@ process_venn_diagrams <- function(file_path, prefix) {
 
 
 # Process both files
-process_venn_diagrams("./excel_output/OUTPUT9.xlsx", "Original")
+process_venn_diagrams("./excel_output/OUTPUT9.xlsx", "NonTrimmed")
 
 process_venn_diagrams("./trimmed_excel_output/OUTPUT9.xlsx", "Trimmed")
 
