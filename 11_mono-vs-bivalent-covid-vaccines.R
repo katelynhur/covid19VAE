@@ -102,7 +102,7 @@ process_venn_diagrams <- function(file_path, prefix) {
 
 # Define file paths for Original and Trimmed
 files <- list(
-  Original = file.path(base_dir, "excel_output", "OUTPUT9.xlsx"),
+  NonTrimmed = file.path(base_dir, "excel_output", "OUTPUT9.xlsx"),
   Trimmed = file.path(base_dir, "trimmed_excel_output", "OUTPUT9.xlsx")
 )
 
