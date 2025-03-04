@@ -1,6 +1,6 @@
 # covid19VAE
 
-This project includes the materials from a collaborative research project on Covid-19 vaccine adverse events. 
+This project includes the materials from a collaborative research project on COVID-19 vaccine adverse events. 
 
 ### Title: Profiling COVID-19 Vaccine Adverse Events Using VAERS Case Reports: What Has Changed Since 2021?
 ### Authors
@@ -12,4 +12,5 @@ Affiliations:
 <sup>3</sup>  University of Michigan, Ann Arbor, Michigan
 <sup>4</sup>  University of North Dakota, Grand Forks, North Dakota
 
-by **Katelyn Hur**
+**<sup>*</sup>Equal contribution**, **<sup>$</sup>Corresponding**<br>
+Created by **Katelyn Hur**
