@@ -12,8 +12,7 @@ library(pacman)
 cran_packages <- c(
   "readxl", "writexl", "tidyverse", "ggplot2", "ComplexUpset", 
   "ggVennDiagram", "tibble", "UpSetR", "ComplexUpset",
-  "ComplexHeatmap" # Added ggVennDiagram
-  
+  "ComplexHeatmap"
 )
 
 # Required Bioconductor packages
