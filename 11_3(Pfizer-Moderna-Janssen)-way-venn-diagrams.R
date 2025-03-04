@@ -1,7 +1,7 @@
 ################################################################################
 #####################  Packages  ###############################################
 ################################################################################
-
+#
 # Install pacman for package management if not already installed
 if (!requireNamespace("pacman", quietly = TRUE)) {
   install.packages("pacman")
