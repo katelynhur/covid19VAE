@@ -54,12 +54,12 @@ process_venn_diagrams <- function(file_path, prefix) {
   moderna_bivalent_ae <- moderna_bivalent_data[[1]]
   
   # Prepare Venn lists
-  pfizer_list <- list(PFIZER = pfizer_ae, PFIZER_BIVALENT = pfizer_bivalent_ae)
-  moderna_list <- list(MODERNA = moderna_ae, MODERNA_BIVALENT = moderna_bivalent_ae)
+  pfizer_list <- list("\n\n\nPfizer\nMono" = pfizer_ae, "\n\n\nPfizer\nBi" = pfizer_bivalent_ae)
+  moderna_list <- list("\n\n\nModerna\nMono" = moderna_ae, "\n\n\nModerna\nBi" = moderna_bivalent_ae)
   
   custom_colors <- c(
-    PFIZER = "#1f77b4",          # Blue
-    PFIZER_BIVALENT = "#4b91d3", # Lighter Blue
+    PFIZER = "#023981",          # Blue
+    PFIZER_BIVALENT = "#92C1FE", # Lighter Blue
     MODERNA = "#d62728",         # Red
     MODERNA_BIVALENT = "#ff9896",# Lighter Red
     JANSSEN = "#2ca02c",         # Green
@@ -68,13 +68,15 @@ process_venn_diagrams <- function(file_path, prefix) {
   
   # Generate and save Venn diagrams using VennDetail
   pfizer_venn <- VennDetail::venndetail(pfizer_list)
-  pdf(file.path(output_dir, paste0(prefix, "_PFIZER_VennDetail_Mono-vs-Bivalent.pdf")), width=12, height=8)
-  plot(pfizer_venn, mycol=custom_colors[c("PFIZER","PFIZER_BIVALENT")])
+  pdf(file.path(output_dir, paste0(prefix, "_PFIZER_VennDetail_Mono-vs-Bivalent.pdf")), width=10, height=8)
+  plot(pfizer_venn, mycol=custom_colors[c("PFIZER","PFIZER_BIVALENT")],
+       cat.cex = 3, alpha = 0.5, cex = 3.8, cat.fontface = "bold", margin = 0.1)
   dev.off()
   
   moderna_venn <- VennDetail::venndetail(moderna_list)
-  pdf(file.path(output_dir, paste0(prefix, "_MODERNA_VennDetail_Mono-vs-Bivalent.pdf")), width=12, height=8)
-  plot(moderna_venn, mycol=custom_colors[c("MODERNA","MODERNA_BIVALENT")])
+  pdf(file.path(output_dir, paste0(prefix, "_MODERNA_VennDetail_Mono-vs-Bivalent.pdf")), width=10, height=8)
+  plot(moderna_venn, mycol=custom_colors[c("MODERNA","MODERNA_BIVALENT")],
+       cat.cex = 3, alpha = 0.5, cex = 3.8, cat.fontface = "bold", margin = 0.1)
   dev.off()
   
   # Save intersection results

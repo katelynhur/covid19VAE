@@ -592,21 +592,21 @@ process_venn_diagrams <- function(file_path, prefix) {
   novavax_ae <- novavax_data[[1]]
   
   venn_list <- list(
-    PFIZER = pfizer_ae,
-    PFIZER_BIVALENT = pfizer_bivalent_ae,
-    MODERNA = moderna_ae,
-    MODERNA_BIVALENT = moderna_bivalent_ae,
-    JANSSEN = janssen_ae,
-    NOVAVAX = novavax_ae
+    Pfizer_mono = pfizer_ae,
+    Pfizer_bi = pfizer_bivalent_ae,
+    Moderna_mono = moderna_ae,
+    Moderna_bi = moderna_bivalent_ae,
+    Janssen = janssen_ae,
+    Novavax = novavax_ae
   )
   
   custom_colors <- c(
-    PFIZER = "#1f77b4",          # Blue
-    PFIZER_BIVALENT = "#4b91d3", # Lighter Blue
-    MODERNA = "#d62728",         # Red
-    MODERNA_BIVALENT = "#ff9896",# Lighter Red
-    JANSSEN = "#2ca02c",         # Green
-    NOVAVAX = "#ffd700"          # Yellow
+    Pfizer_mono = "#1f77b4",          # Blue
+    Pfizer_bi = "#4b91d3", # Lighter Blue
+    Moderna_mono = "#d62728",         # Red
+    Moderna_bi = "#ff9896",# Lighter Red
+    Janssen = "#2ca02c",         # Green
+    Novavax = "#ffd700"          # Yellow
   )
   
 
