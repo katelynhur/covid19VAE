@@ -1,0 +1,1825 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/main.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Vaxafe Query</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link href="../css/bmain.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../js/common.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+<body style="margin:0px;" id="main_body">
+<!-- InstanceBeginEditable name="TopBanner" -->
+<div style="clear:both; min-width:760px;">
+  <div style="float:left; width:160px;"><a href="/index.php"><img src="/images/VIOLIN-Logo-2008-07-30.jpg" alt="VIOLIN Logo" width="160" height="90" border="0" /></a></div>
+  <div style="float:right;"><img src="/images/banner-2008-07-30.jpg" alt="VIOLIN Banner" width="595" height="90" /></div>
+</div>
+<div style="background:#ffcc33; padding:2px 0px 2px 0px; min-width:760px; clear:both; background-image:url(/images/search_bar_bg.gif);" align="center">
+  <form action="/searchWeb.php" method="post" id="webSearch" style="margin-left:10px;">
+    Search:
+    <select name="searchEngine" id="webSearch_searchEngine">
+      <option value="vaxquery">Vaxquery</option>
+      <option value="vo">VO Browser</option>
+      <option value="vaxgen">Vaxgen</option>
+      <option value="litesearch">Litesearch</option><option value="vaxmesh">Vaxmesh</option>
+      <option value="---">-----------------------</option>
+      <option value="pubmed">PubMed</option>
+      <option value="google">Google</option>
+      <option value="ncbi_protein">NCBI Protein</option>
+      <option value="ncbi_nucleotide">NCBI Nucleotide</option>
+      <option value="ncbi_genome">NCBI Genome</option>
+      <option value="ncbi_gene">NCBI Gene</option>
+    </select>
+    for
+    <input size="40" name="keywords" />
+    <input type="submit" value="GO" name="submit" />
+    <input type="reset" value="Clear" name="clear" />
+    <a href="/vaxquery/query_help.php">Help</a>
+  </form>
+</div>
+<!-- InstanceEndEditable -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+  <td width="160" valign="top">
+<!-- InstanceBeginEditable name="LeftNavBar" -->
+<div style="width:144px; border:solid 1px #FFDF33; background-color:#FFFFFF; margin-left:7px; margin-right:7px; margin-top:7px; margin-bottom:10px;">
+<dl style="margin-left:0px; padding-left:5px; margin-top:0px; padding-top:0px;">
+<dt class="topnav"><a href="/vaxafe/index.php">Home</a></dt>
+<dt class="topnav"><a href="/vaxafe/intro.php">Introduction</a></dt>
+<dt class="topnav"><a href="/vaxafe/statistics.php">Statistics</a></dt>
+<dt class="topnav"><a href="/vaxafe/case.php">VAE Case Query</a></dt>
+<dt class="topnav"><a href="/vaxafe/query_vae.php">VAE Query</a></dt>
+<dt class="topnav"><a href="/vaxafe/stat_analysis_vae.php">Stat Analysis</a></dt>
+<dt class="topnav"><a href="/vaxafe/news.php">News</a></dt>
+<dt class="topnav"><a href="/vaxafe/tutorial.php">Tutorial</a></dt>
+<dt class="topnav"><a href="/vaxafe/docs/index.php">Documentation</a></dt>
+<dt class="topnav"><a href="/vaxafe/acknowledge.php">Acknowledgements</a></dt>
+<dt class="topnav"><a href="/vaxafe/faqs.php">FAQs</a></dt>
+<dt class="topnav"><a href="/vaxafe/disclaimer.php">Disclaimer</a></dt>
+<dt class="topnav"><a href="/vaxafe/contact_us.php">Contact Us</a></dt>
+</dl>
+</div>
+
+<div style="text-align:center"><a href="http://www.umich.edu/" target="_blank"><img src="/images/UM_logo.svg.png" alt="UMMS Logo" width="81"/></a></div>
+<!-- InstanceEndEditable -->
+  </td>
+    <td valign="top">
+<div style="margin:6px 10px 16px 16px;">
+  <!-- InstanceBeginEditable name="Main" -->
+  
+  <h3>Vaccine Safety Query Results</h3>
+  
+<p>Your query: (vaccine name: COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))) AND (age >= 0) AND (age <= 9) AND (sex: M).</p>
+<p>Export to <a href="export_excel.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;sort_by=COVID19-2">Excel file</a></p>
+  <table cellpadding="2" cellspacing="2" style="border: #999999 thin solid">
+    <tr>
+      <td class="styleLeftColumn">#</td>
+    <td class="styleLeftColumn">Adverse Event (AE)</td>
+    <td class="styleLeftColumn">
+<img src="../images/desc.gif" alt="Sort" />
+<!--?php //echo $vaccine?--: ?php //echo $vaccine_label ?-->
+AE cases / total cases reported	
+	</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>1</b></td>
+      <td class="tdData">Incorrect product formulation administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Incorrect product formulation administered">197</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>2</b></td>
+      <td class="tdData">No adverse event</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=No adverse event">192</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>3</b></td>
+      <td class="tdData">Incorrect dose administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Incorrect dose administered">158</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>4</b></td>
+      <td class="tdData">Expired product administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Expired product administered">136</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>5</b></td>
+      <td class="tdData">Product preparation issue</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product preparation issue">89</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>6</b></td>
+      <td class="tdData">Product storage error</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product storage error">82</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>7</b></td>
+      <td class="tdData">Product administered to patient of inappropriate age</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product administered to patient of inappropriate age">70</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>8</b></td>
+      <td class="tdData">Product preparation error</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product preparation error">46</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>9</b></td>
+      <td class="tdData">Pyrexia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pyrexia">28</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>10</b></td>
+      <td class="tdData">Wrong product administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Wrong product administered">28</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>11</b></td>
+      <td class="tdData">Unevaluable event</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Unevaluable event">24</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>12</b></td>
+      <td class="tdData">Inappropriate schedule of product administration</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Inappropriate schedule of product administration">17</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>13</b></td>
+      <td class="tdData">Interchange of vaccine products</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Interchange of vaccine products">15</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>14</b></td>
+      <td class="tdData">Extra dose administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Extra dose administered">15</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>15</b></td>
+      <td class="tdData">Pain in extremity</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pain in extremity">14</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>16</b></td>
+      <td class="tdData">Vomiting</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vomiting">14</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>17</b></td>
+      <td class="tdData">Discontinued product administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Discontinued product administered">13</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>18</b></td>
+      <td class="tdData">Cough</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Cough">12</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>19</b></td>
+      <td class="tdData">Headache</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Headache">11</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>20</b></td>
+      <td class="tdData">Rash</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Rash">11</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>21</b></td>
+      <td class="tdData">SARS-CoV-2 test negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=SARS-CoV-2 test negative">11</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>22</b></td>
+      <td class="tdData">Underdose</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Underdose">11</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>23</b></td>
+      <td class="tdData">Urticaria</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Urticaria">11</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>24</b></td>
+      <td class="tdData">COVID-19</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=COVID-19">10</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>25</b></td>
+      <td class="tdData">Vaccination error</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vaccination error">9</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>26</b></td>
+      <td class="tdData">Injection site pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site pain">9</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>27</b></td>
+      <td class="tdData">Fatigue</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Fatigue">9</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>28</b></td>
+      <td class="tdData">Pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pain">9</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>29</b></td>
+      <td class="tdData">Nausea</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Nausea">8</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>30</b></td>
+      <td class="tdData">Lethargy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Lethargy">7</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>31</b></td>
+      <td class="tdData">Nasopharyngitis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Nasopharyngitis">7</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>32</b></td>
+      <td class="tdData">Oropharyngeal pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Oropharyngeal pain">7</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>33</b></td>
+      <td class="tdData">Product administration error</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product administration error">7</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>34</b></td>
+      <td class="tdData">SARS-CoV-2 test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=SARS-CoV-2 test">7</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>35</b></td>
+      <td class="tdData">Dizziness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dizziness">6</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>36</b></td>
+      <td class="tdData">Dyspnoea</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dyspnoea">6</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>37</b></td>
+      <td class="tdData">Malaise</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Malaise">6</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>38</b></td>
+      <td class="tdData">Respiratory tract congestion</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Respiratory tract congestion">6</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>39</b></td>
+      <td class="tdData">Pallor</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pallor">5</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>40</b></td>
+      <td class="tdData">Streptococcus test positive</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Streptococcus test positive">5</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>41</b></td>
+      <td class="tdData">SARS-CoV-2 test positive</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=SARS-CoV-2 test positive">5</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>42</b></td>
+      <td class="tdData">Drug ineffective</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Drug ineffective">5</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>43</b></td>
+      <td class="tdData">Medication error</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Medication error">5</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>44</b></td>
+      <td class="tdData">Feeling abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Feeling abnormal">5</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>45</b></td>
+      <td class="tdData">Ear infection</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Ear infection">5</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>46</b></td>
+      <td class="tdData">Gait disturbance</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Gait disturbance">4</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>47</b></td>
+      <td class="tdData">Syncope</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Syncope">4</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>48</b></td>
+      <td class="tdData">Pruritus</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pruritus">4</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>49</b></td>
+      <td class="tdData">Pharyngitis streptococcal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pharyngitis streptococcal">4</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>50</b></td>
+      <td class="tdData">Irritability</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Irritability">4</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>51</b></td>
+      <td class="tdData">Diarrhoea</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Diarrhoea">4</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>52</b></td>
+      <td class="tdData">Fall</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Fall">4</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>53</b></td>
+      <td class="tdData">Ear pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Ear pain">4</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>54</b></td>
+      <td class="tdData">Erythema</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Erythema">4</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>55</b></td>
+      <td class="tdData">Crying</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Crying">4</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>56</b></td>
+      <td class="tdData">Asthenia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Asthenia">4</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>57</b></td>
+      <td class="tdData">Influenza virus test negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Influenza virus test negative">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>58</b></td>
+      <td class="tdData">Swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Swelling">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>59</b></td>
+      <td class="tdData">Product use issue</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product use issue">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>60</b></td>
+      <td class="tdData">Loss of personal independence in daily activities</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Loss of personal independence in daily activities">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>61</b></td>
+      <td class="tdData">Insomnia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Insomnia">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>62</b></td>
+      <td class="tdData">Injection site erythema</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site erythema">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>63</b></td>
+      <td class="tdData">Loss of consciousness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Loss of consciousness">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>64</b></td>
+      <td class="tdData">Full blood count normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Full blood count normal">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>65</b></td>
+      <td class="tdData">Condition aggravated</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Condition aggravated">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>66</b></td>
+      <td class="tdData">Circumstance or information capable of leading to medication error</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Circumstance or information capable of leading to medication error">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>67</b></td>
+      <td class="tdData">Chest X-ray abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Chest X-ray abnormal">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>68</b></td>
+      <td class="tdData">Abnormal behaviour</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Abnormal behaviour">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>69</b></td>
+      <td class="tdData">Abdominal pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Abdominal pain">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>70</b></td>
+      <td class="tdData">Decreased appetite</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Decreased appetite">3</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>71</b></td>
+      <td class="tdData">Laboratory test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Laboratory test">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>72</b></td>
+      <td class="tdData">Mechanical ventilation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Mechanical ventilation">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>73</b></td>
+      <td class="tdData">Lip swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Lip swelling">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>74</b></td>
+      <td class="tdData">Laboratory test normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Laboratory test normal">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>75</b></td>
+      <td class="tdData">Injection site swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site swelling">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>76</b></td>
+      <td class="tdData">Intensive care</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Intensive care">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>77</b></td>
+      <td class="tdData">Injection site warmth</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site warmth">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>78</b></td>
+      <td class="tdData">Influenza A virus test positive</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Influenza A virus test positive">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>79</b></td>
+      <td class="tdData">Injection site rash</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site rash">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>80</b></td>
+      <td class="tdData">Off label use</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Off label use">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>81</b></td>
+      <td class="tdData">Myalgia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Myalgia">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>82</b></td>
+      <td class="tdData">Viral infection</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Viral infection">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>83</b></td>
+      <td class="tdData">Paraesthesia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Paraesthesia">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>84</b></td>
+      <td class="tdData">Peripheral swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Peripheral swelling">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>85</b></td>
+      <td class="tdData">Pneumonia bacterial</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pneumonia bacterial">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>86</b></td>
+      <td class="tdData">Red blood cell transfusion</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Red blood cell transfusion">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>87</b></td>
+      <td class="tdData">Respiratory symptom</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Respiratory symptom">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>88</b></td>
+      <td class="tdData">Rhinorrhoea</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Rhinorrhoea">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>89</b></td>
+      <td class="tdData">Seizure</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Seizure">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>90</b></td>
+      <td class="tdData">Syringe issue</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Syringe issue">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>91</b></td>
+      <td class="tdData">Upper respiratory tract infection</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Upper respiratory tract infection">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>92</b></td>
+      <td class="tdData">Wheezing</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Wheezing">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>93</b></td>
+      <td class="tdData">Wrong patient received product</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Wrong patient received product">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>94</b></td>
+      <td class="tdData">Infection</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Infection">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>95</b></td>
+      <td class="tdData">Inflammation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Inflammation">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>96</b></td>
+      <td class="tdData">Sinusitis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Sinusitis">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>97</b></td>
+      <td class="tdData">Immunisation reaction</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Immunisation reaction">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>98</b></td>
+      <td class="tdData">Central venous catheterisation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Central venous catheterisation">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>99</b></td>
+      <td class="tdData">Immediate post-injection reaction</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Immediate post-injection reaction">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>100</b></td>
+      <td class="tdData">Abdominal discomfort</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Abdominal discomfort">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>101</b></td>
+      <td class="tdData">Agitation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Agitation">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>102</b></td>
+      <td class="tdData">Anxiety</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Anxiety">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>103</b></td>
+      <td class="tdData">Arthralgia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Arthralgia">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>104</b></td>
+      <td class="tdData">Back pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Back pain">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>105</b></td>
+      <td class="tdData">Blood culture negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood culture negative">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>106</b></td>
+      <td class="tdData">Blood test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood test">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>107</b></td>
+      <td class="tdData">Blood test abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood test abnormal">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>108</b></td>
+      <td class="tdData">Body temperature increased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Body temperature increased">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>109</b></td>
+      <td class="tdData">C-reactive protein normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=C-reactive protein normal">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>110</b></td>
+      <td class="tdData">Acute respiratory failure</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Acute respiratory failure">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>111</b></td>
+      <td class="tdData">Chest pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Chest pain">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>112</b></td>
+      <td class="tdData">Confusional state</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Confusional state">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>113</b></td>
+      <td class="tdData">COVID-19 pneumonia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=COVID-19 pneumonia">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>114</b></td>
+      <td class="tdData">Death</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Death">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>115</b></td>
+      <td class="tdData">Dermatitis diaper</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dermatitis diaper">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>116</b></td>
+      <td class="tdData">Hypoxia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypoxia">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>117</b></td>
+      <td class="tdData">Exposure to communicable disease</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Exposure to communicable disease">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>118</b></td>
+      <td class="tdData">Food allergy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Food allergy">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>119</b></td>
+      <td class="tdData">Head injury</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Head injury">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>120</b></td>
+      <td class="tdData">Hyperhidrosis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hyperhidrosis">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>121</b></td>
+      <td class="tdData">Hypotension</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypotension">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>122</b></td>
+      <td class="tdData">Chills</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Chills">2</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>123</b></td>
+      <td class="tdData">Oedema peripheral</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Oedema peripheral">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>124</b></td>
+      <td class="tdData">Oral disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Oral disorder">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>125</b></td>
+      <td class="tdData">Oesophagogastroduodenoscopy normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Oesophagogastroduodenoscopy normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>126</b></td>
+      <td class="tdData">Nasal congestion</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Nasal congestion">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>127</b></td>
+      <td class="tdData">Obstructive sleep apnoea syndrome</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Obstructive sleep apnoea syndrome">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>128</b></td>
+      <td class="tdData">Neurological symptom</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Neurological symptom">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>129</b></td>
+      <td class="tdData">Neuralgia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Neuralgia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>130</b></td>
+      <td class="tdData">Needle issue</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Needle issue">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>131</b></td>
+      <td class="tdData">Otitis externa</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Otitis externa">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>132</b></td>
+      <td class="tdData">Myocardial infarction</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Myocardial infarction">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>133</b></td>
+      <td class="tdData">Oropharyngeal discomfort</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Oropharyngeal discomfort">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>134</b></td>
+      <td class="tdData">Pneumonia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pneumonia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>135</b></td>
+      <td class="tdData">Overdose</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Overdose">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>136</b></td>
+      <td class="tdData">Oxygen saturation decreased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Oxygen saturation decreased">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>137</b></td>
+      <td class="tdData">Pain of skin</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pain of skin">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>138</b></td>
+      <td class="tdData">Peripheral sensory neuropathy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Peripheral sensory neuropathy">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>139</b></td>
+      <td class="tdData">Platelet transfusion</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Platelet transfusion">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>140</b></td>
+      <td class="tdData">Poor quality product administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Poor quality product administered">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>141</b></td>
+      <td class="tdData">Poor quality sleep</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Poor quality sleep">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>142</b></td>
+      <td class="tdData">Presyncope</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Presyncope">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>143</b></td>
+      <td class="tdData">Procalcitonin increased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Procalcitonin increased">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>144</b></td>
+      <td class="tdData">Procalcitonin normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Procalcitonin normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>145</b></td>
+      <td class="tdData">Mucosal dryness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Mucosal dryness">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>146</b></td>
+      <td class="tdData">Product formulation issue</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product formulation issue">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>147</b></td>
+      <td class="tdData">Musculoskeletal disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Musculoskeletal disorder">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>148</b></td>
+      <td class="tdData">Leukocytosis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Leukocytosis">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>149</b></td>
+      <td class="tdData">Motion sickness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Motion sickness">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>150</b></td>
+      <td class="tdData">Keratitis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Keratitis">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>151</b></td>
+      <td class="tdData">Infusion</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Infusion">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>152</b></td>
+      <td class="tdData">Injected limb mobility decreased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injected limb mobility decreased">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>153</b></td>
+      <td class="tdData">Injection site discharge</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site discharge">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>154</b></td>
+      <td class="tdData">Injection site haemorrhage</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site haemorrhage">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>155</b></td>
+      <td class="tdData">Injection site inflammation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site inflammation">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>156</b></td>
+      <td class="tdData">Injection site reaction</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site reaction">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>157</b></td>
+      <td class="tdData">Injection site urticaria</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site urticaria">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>158</b></td>
+      <td class="tdData">Insulin therapy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Insulin therapy">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>159</b></td>
+      <td class="tdData">International normalised ratio increased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=International normalised ratio increased">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>160</b></td>
+      <td class="tdData">Investigation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Investigation">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>161</b></td>
+      <td class="tdData">Joint swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Joint swelling">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>162</b></td>
+      <td class="tdData">Ketosis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Ketosis">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>163</b></td>
+      <td class="tdData">Metabolic function test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Metabolic function test">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>164</b></td>
+      <td class="tdData">Klebsiella infection</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Klebsiella infection">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>165</b></td>
+      <td class="tdData">Lagophthalmos</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Lagophthalmos">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>166</b></td>
+      <td class="tdData">Product leakage</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product leakage">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>167</b></td>
+      <td class="tdData">Limb discomfort</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Limb discomfort">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>168</b></td>
+      <td class="tdData">Lipase normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Lipase normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>169</b></td>
+      <td class="tdData">Liver function test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Liver function test">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>170</b></td>
+      <td class="tdData">Lung opacity</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Lung opacity">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>171</b></td>
+      <td class="tdData">Lymphadenopathy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Lymphadenopathy">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>172</b></td>
+      <td class="tdData">Magnetic resonance imaging head abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Magnetic resonance imaging head abnormal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>173</b></td>
+      <td class="tdData">Magnetic resonance imaging head normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Magnetic resonance imaging head normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>174</b></td>
+      <td class="tdData">Memory impairment</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Memory impairment">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>175</b></td>
+      <td class="tdData">Mental status changes</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Mental status changes">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>176</b></td>
+      <td class="tdData">Product label on wrong product</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product label on wrong product">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>177</b></td>
+      <td class="tdData">Scrotal oedema</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Scrotal oedema">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>178</b></td>
+      <td class="tdData">Productive cough</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Productive cough">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>179</b></td>
+      <td class="tdData">Vaccination site macule</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vaccination site macule">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>180</b></td>
+      <td class="tdData">Thrombocytosis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Thrombocytosis">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>181</b></td>
+      <td class="tdData">Tic</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tic">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>182</b></td>
+      <td class="tdData">Tinnitus</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tinnitus">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>183</b></td>
+      <td class="tdData">Tracheostomy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tracheostomy">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>184</b></td>
+      <td class="tdData">Trigeminal neuralgia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Trigeminal neuralgia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>185</b></td>
+      <td class="tdData">Troponin normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Troponin normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>186</b></td>
+      <td class="tdData">Ultrasound abdomen normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Ultrasound abdomen normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>187</b></td>
+      <td class="tdData">Ultrasound scan</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Ultrasound scan">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>188</b></td>
+      <td class="tdData">Upper gastrointestinal haemorrhage</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Upper gastrointestinal haemorrhage">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>189</b></td>
+      <td class="tdData">Upper-airway cough syndrome</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Upper-airway cough syndrome">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>190</b></td>
+      <td class="tdData">Urinary system X-ray</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Urinary system X-ray">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>191</b></td>
+      <td class="tdData">Vaccination site pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vaccination site pain">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>192</b></td>
+      <td class="tdData">Throat irritation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Throat irritation">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>193</b></td>
+      <td class="tdData">Vascular pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vascular pain">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>194</b></td>
+      <td class="tdData">Vertigo</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vertigo">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>195</b></td>
+      <td class="tdData">Vision blurred</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vision blurred">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>196</b></td>
+      <td class="tdData">Visual impairment</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Visual impairment">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>197</b></td>
+      <td class="tdData">Weight bearing difficulty</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Weight bearing difficulty">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>198</b></td>
+      <td class="tdData">White blood cell count abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=White blood cell count abnormal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>199</b></td>
+      <td class="tdData">White blood cell count normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=White blood cell count normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>200</b></td>
+      <td class="tdData">White matter lesion</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=White matter lesion">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>201</b></td>
+      <td class="tdData">Wound</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Wound">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>202</b></td>
+      <td class="tdData">X-ray</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=X-ray">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>203</b></td>
+      <td class="tdData">Influenza</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Influenza">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>204</b></td>
+      <td class="tdData">Thrombocytopenia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Thrombocytopenia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>205</b></td>
+      <td class="tdData">Thoracic radiculopathy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Thoracic radiculopathy">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>206</b></td>
+      <td class="tdData">Providencia infection</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Providencia infection">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>207</b></td>
+      <td class="tdData">Serum sickness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Serum sickness">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>208</b></td>
+      <td class="tdData">Rales</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Rales">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>209</b></td>
+      <td class="tdData">Rash macular</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Rash macular">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>210</b></td>
+      <td class="tdData">Red blood cell sedimentation rate normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Red blood cell sedimentation rate normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>211</b></td>
+      <td class="tdData">Respiratory distress</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Respiratory distress">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>212</b></td>
+      <td class="tdData">Retinal artery occlusion</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Retinal artery occlusion">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>213</b></td>
+      <td class="tdData">Retinal injury</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Retinal injury">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>214</b></td>
+      <td class="tdData">Scoliosis surgery</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Scoliosis surgery">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>215</b></td>
+      <td class="tdData">Screaming</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Screaming">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>216</b></td>
+      <td class="tdData">Scrotal dermatitis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Scrotal dermatitis">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>217</b></td>
+      <td class="tdData">Secretion discharge</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Secretion discharge">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>218</b></td>
+      <td class="tdData">Septic shock</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Septic shock">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>219</b></td>
+      <td class="tdData">Shift to the left</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Shift to the left">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>220</b></td>
+      <td class="tdData">Tenderness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tenderness">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>221</b></td>
+      <td class="tdData">Sinus bradycardia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Sinus bradycardia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>222</b></td>
+      <td class="tdData">Sinus disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Sinus disorder">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>223</b></td>
+      <td class="tdData">Skin disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Skin disorder">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>224</b></td>
+      <td class="tdData">Skin erosion</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Skin erosion">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>225</b></td>
+      <td class="tdData">Skin exfoliation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Skin exfoliation">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>226</b></td>
+      <td class="tdData">Somnolence</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Somnolence">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>227</b></td>
+      <td class="tdData">Sputum culture</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Sputum culture">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>228</b></td>
+      <td class="tdData">Sputum culture positive</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Sputum culture positive">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>229</b></td>
+      <td class="tdData">Streptococcus test negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Streptococcus test negative">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>230</b></td>
+      <td class="tdData">Suspected COVID-19</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Suspected COVID-19">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>231</b></td>
+      <td class="tdData">Tachypnoea</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tachypnoea">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>232</b></td>
+      <td class="tdData">Influenza like illness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Influenza like illness">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>233</b></td>
+      <td class="tdData">Dental implantation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dental implantation">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>234</b></td>
+      <td class="tdData">Increased need for sleep</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Increased need for sleep">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>235</b></td>
+      <td class="tdData">Conjunctivitis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Conjunctivitis">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>236</b></td>
+      <td class="tdData">Bronchiolitis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Bronchiolitis">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>237</b></td>
+      <td class="tdData">Capillary nail refill test abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Capillary nail refill test abnormal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>238</b></td>
+      <td class="tdData">Cardiac disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Cardiac disorder">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>239</b></td>
+      <td class="tdData">Chest discomfort</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Chest discomfort">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>240</b></td>
+      <td class="tdData">Clostridium difficile infection</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Clostridium difficile infection">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>241</b></td>
+      <td class="tdData">Clostridium test positive</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Clostridium test positive">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>242</b></td>
+      <td class="tdData">Coagulopathy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Coagulopathy">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>243</b></td>
+      <td class="tdData">Colitis ulcerative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Colitis ulcerative">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>244</b></td>
+      <td class="tdData">Colonoscopy abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Colonoscopy abnormal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>245</b></td>
+      <td class="tdData">Computerised tomogram head abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Computerised tomogram head abnormal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>246</b></td>
+      <td class="tdData">Conjunctival oedema</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Conjunctival oedema">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>247</b></td>
+      <td class="tdData">Consciousness fluctuating</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Consciousness fluctuating">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>248</b></td>
+      <td class="tdData">Breakthrough COVID-19</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Breakthrough COVID-19">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>249</b></td>
+      <td class="tdData">Contusion</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Contusion">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>250</b></td>
+      <td class="tdData">COVID-19 immunisation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=COVID-19 immunisation">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>251</b></td>
+      <td class="tdData">Cryptococcus test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Cryptococcus test">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>252</b></td>
+      <td class="tdData">CSF test abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=CSF test abnormal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>253</b></td>
+      <td class="tdData">Culture urine negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Culture urine negative">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>254</b></td>
+      <td class="tdData">Deafness unilateral</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Deafness unilateral">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>255</b></td>
+      <td class="tdData">Decubitus ulcer</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Decubitus ulcer">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>256</b></td>
+      <td class="tdData">Dehydration</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dehydration">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>257</b></td>
+      <td class="tdData">Delirium</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Delirium">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>258</b></td>
+      <td class="tdData">Differential white blood cell count normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Differential white blood cell count normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>259</b></td>
+      <td class="tdData">Disorientation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Disorientation">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>260</b></td>
+      <td class="tdData">Breathing-related sleep disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Breathing-related sleep disorder">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>261</b></td>
+      <td class="tdData">Bradycardia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Bradycardia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>262</b></td>
+      <td class="tdData">Dysphonia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dysphonia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>263</b></td>
+      <td class="tdData">Axillary pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Axillary pain">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>264</b></td>
+      <td class="tdData">Abdominal pain upper</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Abdominal pain upper">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>265</b></td>
+      <td class="tdData">Adenovirus infection</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Adenovirus infection">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>266</b></td>
+      <td class="tdData">Adverse reaction</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Adverse reaction">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>267</b></td>
+      <td class="tdData">Allodynia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Allodynia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>268</b></td>
+      <td class="tdData">Ammonia increased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Ammonia increased">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>269</b></td>
+      <td class="tdData">Angioedema</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Angioedema">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>270</b></td>
+      <td class="tdData">Angiogram retina abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Angiogram retina abnormal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>271</b></td>
+      <td class="tdData">Antimicrobial susceptibility test resistant</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Antimicrobial susceptibility test resistant">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>272</b></td>
+      <td class="tdData">Asthma</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Asthma">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>273</b></td>
+      <td class="tdData">Atrial fibrillation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Atrial fibrillation">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>274</b></td>
+      <td class="tdData">Attention deficit hyperactivity disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Attention deficit hyperactivity disorder">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>275</b></td>
+      <td class="tdData">Bacterial test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Bacterial test">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>276</b></td>
+      <td class="tdData">Body temperature</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Body temperature">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>277</b></td>
+      <td class="tdData">Biopsy retina abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Biopsy retina abnormal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>278</b></td>
+      <td class="tdData">Blepharorrhaphy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blepharorrhaphy">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>279</b></td>
+      <td class="tdData">Blood creatine phosphokinase normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood creatine phosphokinase normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>280</b></td>
+      <td class="tdData">Blood electrolytes normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood electrolytes normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>281</b></td>
+      <td class="tdData">Blood gases</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood gases">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>282</b></td>
+      <td class="tdData">Blood immunoglobulin G</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood immunoglobulin G">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>283</b></td>
+      <td class="tdData">Blood immunoglobulin M</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood immunoglobulin M">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>284</b></td>
+      <td class="tdData">Blood ketone body</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood ketone body">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>285</b></td>
+      <td class="tdData">Blood pressure measurement</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood pressure measurement">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>286</b></td>
+      <td class="tdData">Blood sodium decreased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood sodium decreased">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>287</b></td>
+      <td class="tdData">Blood thyroid stimulating hormone normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood thyroid stimulating hormone normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>288</b></td>
+      <td class="tdData">Duodenal ulcer</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Duodenal ulcer">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>289</b></td>
+      <td class="tdData">Dysstasia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dysstasia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>290</b></td>
+      <td class="tdData">Increased bronchial secretion</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Increased bronchial secretion">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>291</b></td>
+      <td class="tdData">Hypertension</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypertension">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>292</b></td>
+      <td class="tdData">Haemofiltration</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Haemofiltration">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>293</b></td>
+      <td class="tdData">Haemoptysis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Haemoptysis">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>294</b></td>
+      <td class="tdData">Haemorrhage</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Haemorrhage">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>295</b></td>
+      <td class="tdData">Hand-foot-and-mouth disease</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hand-foot-and-mouth disease">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>296</b></td>
+      <td class="tdData">Heart rate</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Heart rate">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>297</b></td>
+      <td class="tdData">Heart rate increased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Heart rate increased">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>298</b></td>
+      <td class="tdData">Herpes zoster</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Herpes zoster">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>299</b></td>
+      <td class="tdData">Hyperaesthesia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hyperaesthesia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>300</b></td>
+      <td class="tdData">Hyperammonaemia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hyperammonaemia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>301</b></td>
+      <td class="tdData">Hypernatraemia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypernatraemia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>302</b></td>
+      <td class="tdData">Hypersensitivity</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypersensitivity">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>303</b></td>
+      <td class="tdData">Hypertriglyceridaemia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypertriglyceridaemia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>304</b></td>
+      <td class="tdData">Haematochezia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Haematochezia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>305</b></td>
+      <td class="tdData">Hyperventilation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hyperventilation">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>306</b></td>
+      <td class="tdData">Hypoalbuminaemia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypoalbuminaemia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>307</b></td>
+      <td class="tdData">Hypofibrinogenaemia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypofibrinogenaemia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>308</b></td>
+      <td class="tdData">Hypophagia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypophagia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>309</b></td>
+      <td class="tdData">Hypotonia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypotonia">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>310</b></td>
+      <td class="tdData">Illness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Illness">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>311</b></td>
+      <td class="tdData">Immune system disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Immune system disorder">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>312</b></td>
+      <td class="tdData">Immunosuppressant drug level</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Immunosuppressant drug level">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>313</b></td>
+      <td class="tdData">Impaired work ability</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Impaired work ability">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>314</b></td>
+      <td class="tdData">Incomplete course of vaccination</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Incomplete course of vaccination">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>315</b></td>
+      <td class="tdData">Incorrect route of product administration</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Incorrect route of product administration">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>316</b></td>
+      <td class="tdData">Haemodialysis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Haemodialysis">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>317</b></td>
+      <td class="tdData">Glycosylated haemoglobin normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Glycosylated haemoglobin normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>318</b></td>
+      <td class="tdData">Echocardiogram</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Echocardiogram">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>319</b></td>
+      <td class="tdData">Exposure to SARS-CoV-2</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Exposure to SARS-CoV-2">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>320</b></td>
+      <td class="tdData">Electric shock sensation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Electric shock sensation">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>321</b></td>
+      <td class="tdData">Electrocardiogram</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Electrocardiogram">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>322</b></td>
+      <td class="tdData">Electrocardiogram abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Electrocardiogram abnormal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>323</b></td>
+      <td class="tdData">Electrocardiogram normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Electrocardiogram normal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>324</b></td>
+      <td class="tdData">Electrocardiogram QT prolonged</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Electrocardiogram QT prolonged">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>325</b></td>
+      <td class="tdData">Electroencephalogram abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Electroencephalogram abnormal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>326</b></td>
+      <td class="tdData">Encephalitis autoimmune</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Encephalitis autoimmune">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>327</b></td>
+      <td class="tdData">Encephalopathy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Encephalopathy">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>328</b></td>
+      <td class="tdData">Endoscopy abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Endoscopy abnormal">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>329</b></td>
+      <td class="tdData">Epistaxis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Epistaxis">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>330</b></td>
+      <td class="tdData">Exposure keratitis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Exposure keratitis">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>331</b></td>
+      <td class="tdData">Eye irritation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Eye irritation">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>332</b></td>
+      <td class="tdData">Gluten sensitivity</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Gluten sensitivity">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>333</b></td>
+      <td class="tdData">Eye swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Eye swelling">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>334</b></td>
+      <td class="tdData">Face oedema</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Face oedema">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>335</b></td>
+      <td class="tdData">Faecal calprotectin increased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Faecal calprotectin increased">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>336</b></td>
+      <td class="tdData">Feeling cold</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Feeling cold">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>337</b></td>
+      <td class="tdData">Forced expiratory volume</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Forced expiratory volume">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>338</b></td>
+      <td class="tdData">Fraction of inspired oxygen</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Fraction of inspired oxygen">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>339</b></td>
+      <td class="tdData">Full blood count</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Full blood count">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>340</b></td>
+      <td class="tdData">Gastroenteritis viral</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Gastroenteritis viral">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>341</b></td>
+      <td class="tdData">Gastrointestinal pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Gastrointestinal pain">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>342</b></td>
+      <td class="tdData">Gene sequencing</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Gene sequencing">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>343</b></td>
+      <td class="tdData">Giant cell arteritis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Giant cell arteritis">1</a> / 942</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>344</b></td>
+      <td class="tdData">X-ray gastrointestinal tract normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=0&amp;age_to=9&amp;sex=M&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (PFIZER-BIONTECH BIVALENT))&amp;vaccine=COVID19-2&amp;sym=X-ray gastrointestinal tract normal">1</a> / 942</td>
+    </tr>
+      </table>
+  
+  <!-- InstanceEndEditable -->
+</div>
+    </td>
+  </tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4869243-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+<!-- InstanceEnd --></html>

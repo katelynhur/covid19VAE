@@ -1,0 +1,2090 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/main.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Vaxafe Query</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link href="../css/bmain.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../js/common.js"></script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+<body style="margin:0px;" id="main_body">
+<!-- InstanceBeginEditable name="TopBanner" -->
+<div style="clear:both; min-width:760px;">
+  <div style="float:left; width:160px;"><a href="/index.php"><img src="/images/VIOLIN-Logo-2008-07-30.jpg" alt="VIOLIN Logo" width="160" height="90" border="0" /></a></div>
+  <div style="float:right;"><img src="/images/banner-2008-07-30.jpg" alt="VIOLIN Banner" width="595" height="90" /></div>
+</div>
+<div style="background:#ffcc33; padding:2px 0px 2px 0px; min-width:760px; clear:both; background-image:url(/images/search_bar_bg.gif);" align="center">
+  <form action="/searchWeb.php" method="post" id="webSearch" style="margin-left:10px;">
+    Search:
+    <select name="searchEngine" id="webSearch_searchEngine">
+      <option value="vaxquery">Vaxquery</option>
+      <option value="vo">VO Browser</option>
+      <option value="vaxgen">Vaxgen</option>
+      <option value="litesearch">Litesearch</option><option value="vaxmesh">Vaxmesh</option>
+      <option value="---">-----------------------</option>
+      <option value="pubmed">PubMed</option>
+      <option value="google">Google</option>
+      <option value="ncbi_protein">NCBI Protein</option>
+      <option value="ncbi_nucleotide">NCBI Nucleotide</option>
+      <option value="ncbi_genome">NCBI Genome</option>
+      <option value="ncbi_gene">NCBI Gene</option>
+    </select>
+    for
+    <input size="40" name="keywords" />
+    <input type="submit" value="GO" name="submit" />
+    <input type="reset" value="Clear" name="clear" />
+    <a href="/vaxquery/query_help.php">Help</a>
+  </form>
+</div>
+<!-- InstanceEndEditable -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+  <td width="160" valign="top">
+<!-- InstanceBeginEditable name="LeftNavBar" -->
+<div style="width:144px; border:solid 1px #FFDF33; background-color:#FFFFFF; margin-left:7px; margin-right:7px; margin-top:7px; margin-bottom:10px;">
+<dl style="margin-left:0px; padding-left:5px; margin-top:0px; padding-top:0px;">
+<dt class="topnav"><a href="/vaxafe/index.php">Home</a></dt>
+<dt class="topnav"><a href="/vaxafe/intro.php">Introduction</a></dt>
+<dt class="topnav"><a href="/vaxafe/statistics.php">Statistics</a></dt>
+<dt class="topnav"><a href="/vaxafe/case.php">VAE Case Query</a></dt>
+<dt class="topnav"><a href="/vaxafe/query_vae.php">VAE Query</a></dt>
+<dt class="topnav"><a href="/vaxafe/stat_analysis_vae.php">Stat Analysis</a></dt>
+<dt class="topnav"><a href="/vaxafe/news.php">News</a></dt>
+<dt class="topnav"><a href="/vaxafe/tutorial.php">Tutorial</a></dt>
+<dt class="topnav"><a href="/vaxafe/docs/index.php">Documentation</a></dt>
+<dt class="topnav"><a href="/vaxafe/acknowledge.php">Acknowledgements</a></dt>
+<dt class="topnav"><a href="/vaxafe/faqs.php">FAQs</a></dt>
+<dt class="topnav"><a href="/vaxafe/disclaimer.php">Disclaimer</a></dt>
+<dt class="topnav"><a href="/vaxafe/contact_us.php">Contact Us</a></dt>
+</dl>
+</div>
+
+<div style="text-align:center"><a href="http://www.umich.edu/" target="_blank"><img src="/images/UM_logo.svg.png" alt="UMMS Logo" width="81"/></a></div>
+<!-- InstanceEndEditable -->
+  </td>
+    <td valign="top">
+<div style="margin:6px 10px 16px 16px;">
+  <!-- InstanceBeginEditable name="Main" -->
+  
+  <h3>Vaccine Safety Query Results</h3>
+  
+<p>Your query: (vaccine name: COVID19 (COVID19 (MODERNA BIVALENT))) AND (age >= 20) AND (age <= 29) AND (sex: F).</p>
+<p>Export to <a href="export_excel.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;sort_by=COVID19-2">Excel file</a></p>
+  <table cellpadding="2" cellspacing="2" style="border: #999999 thin solid">
+    <tr>
+      <td class="styleLeftColumn">#</td>
+    <td class="styleLeftColumn">Adverse Event (AE)</td>
+    <td class="styleLeftColumn">
+<img src="../images/desc.gif" alt="Sort" />
+<!--?php //echo $vaccine?--: ?php //echo $vaccine_label ?-->
+AE cases / total cases reported	
+	</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>1</b></td>
+      <td class="tdData">No adverse event</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=No adverse event">93</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>2</b></td>
+      <td class="tdData">Incorrect product formulation administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Incorrect product formulation administered">57</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>3</b></td>
+      <td class="tdData">Underdose</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Underdose">52</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>4</b></td>
+      <td class="tdData">Dizziness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dizziness">42</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>5</b></td>
+      <td class="tdData">Pyrexia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pyrexia">42</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>6</b></td>
+      <td class="tdData">Product storage error</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product storage error">38</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>7</b></td>
+      <td class="tdData">Pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pain">37</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>8</b></td>
+      <td class="tdData">Fatigue</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Fatigue">35</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>9</b></td>
+      <td class="tdData">Expired product administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Expired product administered">33</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>10</b></td>
+      <td class="tdData">Headache</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Headache">32</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>11</b></td>
+      <td class="tdData">Nausea</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Nausea">27</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>12</b></td>
+      <td class="tdData">Pruritus</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pruritus">26</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>13</b></td>
+      <td class="tdData">Chills</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Chills">25</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>14</b></td>
+      <td class="tdData">Syncope</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Syncope">25</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>15</b></td>
+      <td class="tdData">Injection site pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site pain">24</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>16</b></td>
+      <td class="tdData">Urticaria</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Urticaria">24</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>17</b></td>
+      <td class="tdData">Injection site swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site swelling">20</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>18</b></td>
+      <td class="tdData">Pain in extremity</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pain in extremity">19</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>19</b></td>
+      <td class="tdData">Wrong product administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Wrong product administered">19</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>20</b></td>
+      <td class="tdData">Rash</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Rash">18</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>21</b></td>
+      <td class="tdData">Erythema</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Erythema">18</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>22</b></td>
+      <td class="tdData">Chest pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Chest pain">18</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>23</b></td>
+      <td class="tdData">Injection site erythema</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site erythema">17</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>24</b></td>
+      <td class="tdData">Dyspnoea</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dyspnoea">17</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>25</b></td>
+      <td class="tdData">Loss of consciousness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Loss of consciousness">16</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>26</b></td>
+      <td class="tdData">Arthralgia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Arthralgia">15</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>27</b></td>
+      <td class="tdData">Oropharyngeal pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Oropharyngeal pain">14</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>28</b></td>
+      <td class="tdData">Vomiting</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vomiting">13</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>29</b></td>
+      <td class="tdData">SARS-CoV-2 test positive</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=SARS-CoV-2 test positive">13</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>30</b></td>
+      <td class="tdData">Malaise</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Malaise">13</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>31</b></td>
+      <td class="tdData">Hyperhidrosis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hyperhidrosis">13</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>32</b></td>
+      <td class="tdData">COVID-19</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=COVID-19">13</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>33</b></td>
+      <td class="tdData">Incorrect dose administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Incorrect dose administered">12</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>34</b></td>
+      <td class="tdData">Rash erythematous</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Rash erythematous">11</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>35</b></td>
+      <td class="tdData">Cough</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Cough">10</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>36</b></td>
+      <td class="tdData">Palpitations</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Palpitations">10</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>37</b></td>
+      <td class="tdData">Tremor</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tremor">10</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>38</b></td>
+      <td class="tdData">Asthenia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Asthenia">9</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>39</b></td>
+      <td class="tdData">Myalgia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Myalgia">9</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>40</b></td>
+      <td class="tdData">Syringe issue</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Syringe issue">8</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>41</b></td>
+      <td class="tdData">Tenderness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tenderness">8</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>42</b></td>
+      <td class="tdData">Poor quality product administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Poor quality product administered">8</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>43</b></td>
+      <td class="tdData">Immediate post-injection reaction</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Immediate post-injection reaction">8</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>44</b></td>
+      <td class="tdData">Mechanical urticaria</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Mechanical urticaria">8</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>45</b></td>
+      <td class="tdData">Extra dose administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Extra dose administered">7</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>46</b></td>
+      <td class="tdData">Feeling abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Feeling abnormal">7</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>47</b></td>
+      <td class="tdData">Hypersensitivity</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypersensitivity">7</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>48</b></td>
+      <td class="tdData">Hypoaesthesia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypoaesthesia">7</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>49</b></td>
+      <td class="tdData">Peripheral swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Peripheral swelling">7</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>50</b></td>
+      <td class="tdData">Skin warm</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Skin warm">7</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>51</b></td>
+      <td class="tdData">Tinnitus</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tinnitus">7</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>52</b></td>
+      <td class="tdData">Unresponsive to stimuli</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Unresponsive to stimuli">7</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>53</b></td>
+      <td class="tdData">Rash pruritic</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Rash pruritic">6</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>54</b></td>
+      <td class="tdData">Lymphadenopathy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Lymphadenopathy">6</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>55</b></td>
+      <td class="tdData">Seizure</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Seizure">6</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>56</b></td>
+      <td class="tdData">Neck pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Neck pain">6</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>57</b></td>
+      <td class="tdData">Discomfort</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Discomfort">6</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>58</b></td>
+      <td class="tdData">Injection site pruritus</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site pruritus">6</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>59</b></td>
+      <td class="tdData">Flushing</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Flushing">6</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>60</b></td>
+      <td class="tdData">Decreased appetite</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Decreased appetite">6</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>61</b></td>
+      <td class="tdData">Condition aggravated</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Condition aggravated">6</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>62</b></td>
+      <td class="tdData">Product temperature excursion issue</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product temperature excursion issue">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>63</b></td>
+      <td class="tdData">Unevaluable event</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Unevaluable event">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>64</b></td>
+      <td class="tdData">Sensitive skin</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Sensitive skin">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>65</b></td>
+      <td class="tdData">SARS-CoV-2 test negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=SARS-CoV-2 test negative">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>66</b></td>
+      <td class="tdData">Respiratory tract congestion</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Respiratory tract congestion">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>67</b></td>
+      <td class="tdData">Rash macular</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Rash macular">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>68</b></td>
+      <td class="tdData">Blood test normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood test normal">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>69</b></td>
+      <td class="tdData">Presyncope</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Presyncope">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>70</b></td>
+      <td class="tdData">Paraesthesia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Paraesthesia">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>71</b></td>
+      <td class="tdData">Migraine</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Migraine">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>72</b></td>
+      <td class="tdData">Injection site reaction</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site reaction">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>73</b></td>
+      <td class="tdData">Inappropriate schedule of product administration</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Inappropriate schedule of product administration">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>74</b></td>
+      <td class="tdData">Diarrhoea</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Diarrhoea">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>75</b></td>
+      <td class="tdData">Abdominal pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Abdominal pain">5</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>76</b></td>
+      <td class="tdData">Nasal congestion</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Nasal congestion">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>77</b></td>
+      <td class="tdData">Muscle spasms</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Muscle spasms">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>78</b></td>
+      <td class="tdData">Lymph node pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Lymph node pain">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>79</b></td>
+      <td class="tdData">Rhinorrhoea</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Rhinorrhoea">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>80</b></td>
+      <td class="tdData">Swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Swelling">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>81</b></td>
+      <td class="tdData">Tachycardia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tachycardia">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>82</b></td>
+      <td class="tdData">Mobility decreased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Mobility decreased">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>83</b></td>
+      <td class="tdData">Burning sensation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Burning sensation">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>84</b></td>
+      <td class="tdData">Laboratory test normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Laboratory test normal">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>85</b></td>
+      <td class="tdData">Hypotension</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypotension">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>86</b></td>
+      <td class="tdData">Head injury</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Head injury">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>87</b></td>
+      <td class="tdData">Electrocardiogram normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Electrocardiogram normal">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>88</b></td>
+      <td class="tdData">Electrocardiogram</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Electrocardiogram">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>89</b></td>
+      <td class="tdData">Chest X-ray normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Chest X-ray normal">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>90</b></td>
+      <td class="tdData">Back pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Back pain">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>91</b></td>
+      <td class="tdData">Inflammation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Inflammation">4</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>92</b></td>
+      <td class="tdData">Metabolic function test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Metabolic function test">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>93</b></td>
+      <td class="tdData">Injection site induration</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site induration">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>94</b></td>
+      <td class="tdData">Joint swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Joint swelling">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>95</b></td>
+      <td class="tdData">Laboratory test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Laboratory test">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>96</b></td>
+      <td class="tdData">Lethargy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Lethargy">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>97</b></td>
+      <td class="tdData">Maternal exposure during pregnancy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Maternal exposure during pregnancy">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>98</b></td>
+      <td class="tdData">Swelling face</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Swelling face">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>99</b></td>
+      <td class="tdData">Pallor</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pallor">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>100</b></td>
+      <td class="tdData">Rash papular</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Rash papular">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>101</b></td>
+      <td class="tdData">Sleep disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Sleep disorder">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>102</b></td>
+      <td class="tdData">Immunisation reaction</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Immunisation reaction">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>103</b></td>
+      <td class="tdData">Vertigo</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vertigo">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>104</b></td>
+      <td class="tdData">X-ray normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=X-ray normal">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>105</b></td>
+      <td class="tdData">Impaired work ability</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Impaired work ability">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>106</b></td>
+      <td class="tdData">Urine analysis normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Urine analysis normal">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>107</b></td>
+      <td class="tdData">Heart rate increased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Heart rate increased">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>108</b></td>
+      <td class="tdData">Chronic spontaneous urticaria</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Chronic spontaneous urticaria">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>109</b></td>
+      <td class="tdData">Abdominal discomfort</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Abdominal discomfort">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>110</b></td>
+      <td class="tdData">Blood test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood test">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>111</b></td>
+      <td class="tdData">Blood test abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood test abnormal">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>112</b></td>
+      <td class="tdData">C-reactive protein</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=C-reactive protein">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>113</b></td>
+      <td class="tdData">Chest X-ray</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Chest X-ray">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>114</b></td>
+      <td class="tdData">Chest discomfort</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Chest discomfort">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>115</b></td>
+      <td class="tdData">Cold sweat</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Cold sweat">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>116</b></td>
+      <td class="tdData">Confusional state</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Confusional state">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>117</b></td>
+      <td class="tdData">Discontinued product administered</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Discontinued product administered">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>118</b></td>
+      <td class="tdData">Electrocardiogram abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Electrocardiogram abnormal">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>119</b></td>
+      <td class="tdData">Feeling hot</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Feeling hot">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>120</b></td>
+      <td class="tdData">Full blood count</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Full blood count">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>121</b></td>
+      <td class="tdData">Full blood count normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Full blood count normal">3</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>122</b></td>
+      <td class="tdData">Pregnancy test urine negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pregnancy test urine negative">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>123</b></td>
+      <td class="tdData">Renal function test normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Renal function test normal">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>124</b></td>
+      <td class="tdData">Red blood cell sedimentation rate</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Red blood cell sedimentation rate">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>125</b></td>
+      <td class="tdData">Productive cough</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Productive cough">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>126</b></td>
+      <td class="tdData">Product use issue</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product use issue">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>127</b></td>
+      <td class="tdData">Product administration error</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product administration error">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>128</b></td>
+      <td class="tdData">Muscle twitching</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Muscle twitching">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>129</b></td>
+      <td class="tdData">Posture abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Posture abnormal">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>130</b></td>
+      <td class="tdData">Pericarditis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pericarditis">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>131</b></td>
+      <td class="tdData">Painful respiration</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Painful respiration">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>132</b></td>
+      <td class="tdData">Oropharyngeal discomfort</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Oropharyngeal discomfort">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>133</b></td>
+      <td class="tdData">Musculoskeletal stiffness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Musculoskeletal stiffness">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>134</b></td>
+      <td class="tdData">Muscular weakness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Muscular weakness">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>135</b></td>
+      <td class="tdData">Secretion discharge</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Secretion discharge">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>136</b></td>
+      <td class="tdData">Respiratory disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Respiratory disorder">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>137</b></td>
+      <td class="tdData">Speech disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Speech disorder">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>138</b></td>
+      <td class="tdData">Sensory disturbance</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Sensory disturbance">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>139</b></td>
+      <td class="tdData">Shoulder injury related to vaccine administration</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Shoulder injury related to vaccine administration">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>140</b></td>
+      <td class="tdData">Sinus disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Sinus disorder">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>141</b></td>
+      <td class="tdData">Sinus tachycardia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Sinus tachycardia">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>142</b></td>
+      <td class="tdData">Skin irritation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Skin irritation">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>143</b></td>
+      <td class="tdData">Skin swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Skin swelling">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>144</b></td>
+      <td class="tdData">Sneezing</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Sneezing">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>145</b></td>
+      <td class="tdData">Streptococcus test negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Streptococcus test negative">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>146</b></td>
+      <td class="tdData">Streptococcus test positive</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Streptococcus test positive">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>147</b></td>
+      <td class="tdData">Throat irritation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Throat irritation">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>148</b></td>
+      <td class="tdData">Throat tightness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Throat tightness">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>149</b></td>
+      <td class="tdData">Troponin</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Troponin">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>150</b></td>
+      <td class="tdData">Vaccination site pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vaccination site pain">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>151</b></td>
+      <td class="tdData">Vitamin B12 normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vitamin B12 normal">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>152</b></td>
+      <td class="tdData">Mood swings</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Mood swings">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>153</b></td>
+      <td class="tdData">Muscle fatigue</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Muscle fatigue">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>154</b></td>
+      <td class="tdData">Influenza like illness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Influenza like illness">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>155</b></td>
+      <td class="tdData">Memory impairment</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Memory impairment">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>156</b></td>
+      <td class="tdData">Blood thyroid stimulating hormone normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood thyroid stimulating hormone normal">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>157</b></td>
+      <td class="tdData">Echocardiogram</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Echocardiogram">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>158</b></td>
+      <td class="tdData">Dysstasia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dysstasia">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>159</b></td>
+      <td class="tdData">Dysphagia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dysphagia">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>160</b></td>
+      <td class="tdData">Dizziness postural</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dizziness postural">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>161</b></td>
+      <td class="tdData">Contusion</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Contusion">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>162</b></td>
+      <td class="tdData">Circumstance or information capable of leading to medication error</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Circumstance or information capable of leading to medication error">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>163</b></td>
+      <td class="tdData">Blood magnesium</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood magnesium">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>164</b></td>
+      <td class="tdData">Exposure to SARS-CoV-2</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Exposure to SARS-CoV-2">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>165</b></td>
+      <td class="tdData">Bell's palsy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Bell's palsy">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>166</b></td>
+      <td class="tdData">Axillary pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Axillary pain">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>167</b></td>
+      <td class="tdData">Arrhythmia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Arrhythmia">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>168</b></td>
+      <td class="tdData">Alopecia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Alopecia">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>169</b></td>
+      <td class="tdData">Abdominal pain upper</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Abdominal pain upper">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>170</b></td>
+      <td class="tdData">Magnetic resonance imaging heart</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Magnetic resonance imaging heart">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>171</b></td>
+      <td class="tdData">Exposure during pregnancy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Exposure during pregnancy">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>172</b></td>
+      <td class="tdData">Blood glucose normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood glucose normal">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>173</b></td>
+      <td class="tdData">Fall</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Fall">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>174</b></td>
+      <td class="tdData">Injected limb mobility decreased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injected limb mobility decreased">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>175</b></td>
+      <td class="tdData">Loss of personal independence in daily activities</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Loss of personal independence in daily activities">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>176</b></td>
+      <td class="tdData">Feeling cold</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Feeling cold">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>177</b></td>
+      <td class="tdData">Liver disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Liver disorder">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>178</b></td>
+      <td class="tdData">Injection site warmth</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site warmth">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>179</b></td>
+      <td class="tdData">Liver function test normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Liver function test normal">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>180</b></td>
+      <td class="tdData">Injection site bruising</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site bruising">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>181</b></td>
+      <td class="tdData">Injection site nodule</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site nodule">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>182</b></td>
+      <td class="tdData">Inflammatory marker test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Inflammatory marker test">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>183</b></td>
+      <td class="tdData">Hypertension</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypertension">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>184</b></td>
+      <td class="tdData">Hyperaesthesia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hyperaesthesia">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>185</b></td>
+      <td class="tdData">Hot flush</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hot flush">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>186</b></td>
+      <td class="tdData">Gastritis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Gastritis">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>187</b></td>
+      <td class="tdData">Flank pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Flank pain">2</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>188</b></td>
+      <td class="tdData">Mydriasis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Mydriasis">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>189</b></td>
+      <td class="tdData">Nasopharyngitis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Nasopharyngitis">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>190</b></td>
+      <td class="tdData">Neck mass</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Neck mass">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>191</b></td>
+      <td class="tdData">Needle issue</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Needle issue">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>192</b></td>
+      <td class="tdData">Neuropathy peripheral</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Neuropathy peripheral">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>193</b></td>
+      <td class="tdData">Neutrophil count decreased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Neutrophil count decreased">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>194</b></td>
+      <td class="tdData">No reaction on previous exposure to drug</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=No reaction on previous exposure to drug">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>195</b></td>
+      <td class="tdData">Odynophagia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Odynophagia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>196</b></td>
+      <td class="tdData">Oedema</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Oedema">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>197</b></td>
+      <td class="tdData">Off label use</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Off label use">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>198</b></td>
+      <td class="tdData">Parosmia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Parosmia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>199</b></td>
+      <td class="tdData">Oral herpes</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Oral herpes">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>200</b></td>
+      <td class="tdData">Pain in jaw</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pain in jaw">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>201</b></td>
+      <td class="tdData">Pain of skin</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pain of skin">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>202</b></td>
+      <td class="tdData">Panic attack</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Panic attack">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>203</b></td>
+      <td class="tdData">Paraesthesia oral</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Paraesthesia oral">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>204</b></td>
+      <td class="tdData">Paranasal sinus discomfort</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Paranasal sinus discomfort">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>205</b></td>
+      <td class="tdData">Parvovirus B19 test negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Parvovirus B19 test negative">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>206</b></td>
+      <td class="tdData">Perioral dermatitis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Perioral dermatitis">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>207</b></td>
+      <td class="tdData">Periorbital oedema</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Periorbital oedema">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>208</b></td>
+      <td class="tdData">Periorbital swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Periorbital swelling">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>209</b></td>
+      <td class="tdData">Movement disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Movement disorder">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>210</b></td>
+      <td class="tdData">Peripheral sensory neuropathy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Peripheral sensory neuropathy">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>211</b></td>
+      <td class="tdData">Muscle tightness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Muscle tightness">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>212</b></td>
+      <td class="tdData">Labour induction</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Labour induction">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>213</b></td>
+      <td class="tdData">Mouth swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Mouth swelling">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>214</b></td>
+      <td class="tdData">Photophobia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Photophobia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>215</b></td>
+      <td class="tdData">Injection site rash</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site rash">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>216</b></td>
+      <td class="tdData">Injection site urticaria</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site urticaria">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>217</b></td>
+      <td class="tdData">Injury associated with device</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injury associated with device">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>218</b></td>
+      <td class="tdData">Insomnia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Insomnia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>219</b></td>
+      <td class="tdData">Interchange of vaccine products</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Interchange of vaccine products">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>220</b></td>
+      <td class="tdData">International normalised ratio normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=International normalised ratio normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>221</b></td>
+      <td class="tdData">Joint injury</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Joint injury">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>222</b></td>
+      <td class="tdData">Joint range of motion decreased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Joint range of motion decreased">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>223</b></td>
+      <td class="tdData">Joint stiffness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Joint stiffness">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>224</b></td>
+      <td class="tdData">Laboratory test abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Laboratory test abnormal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>225</b></td>
+      <td class="tdData">Leukopenia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Leukopenia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>226</b></td>
+      <td class="tdData">Metabolic function test normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Metabolic function test normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>227</b></td>
+      <td class="tdData">Limb injury</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Limb injury">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>228</b></td>
+      <td class="tdData">Lip disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Lip disorder">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>229</b></td>
+      <td class="tdData">Lip swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Lip swelling">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>230</b></td>
+      <td class="tdData">Lipase normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Lipase normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>231</b></td>
+      <td class="tdData">Lipids</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Lipids">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>232</b></td>
+      <td class="tdData">Mass</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Mass">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>233</b></td>
+      <td class="tdData">Mast cell activation syndrome</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Mast cell activation syndrome">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>234</b></td>
+      <td class="tdData">Mastication disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Mastication disorder">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>235</b></td>
+      <td class="tdData">Maternal exposure during breast feeding</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Maternal exposure during breast feeding">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>236</b></td>
+      <td class="tdData">Menstrual disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Menstrual disorder">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>237</b></td>
+      <td class="tdData">Menstruation delayed</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Menstruation delayed">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>238</b></td>
+      <td class="tdData">Pharyngeal paraesthesia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pharyngeal paraesthesia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>239</b></td>
+      <td class="tdData">Seizure like phenomena</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Seizure like phenomena">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>240</b></td>
+      <td class="tdData">Postural orthostatic tachycardia syndrome</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Postural orthostatic tachycardia syndrome">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>241</b></td>
+      <td class="tdData">Ultrasound scan normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Ultrasound scan normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>242</b></td>
+      <td class="tdData">Temporomandibular joint syndrome</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Temporomandibular joint syndrome">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>243</b></td>
+      <td class="tdData">Tension headache</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tension headache">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>244</b></td>
+      <td class="tdData">Throat clearing</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Throat clearing">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>245</b></td>
+      <td class="tdData">Thromboelastogram</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Thromboelastogram">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>246</b></td>
+      <td class="tdData">Tilt table test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tilt table test">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>247</b></td>
+      <td class="tdData">Tonsillar haemorrhage</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tonsillar haemorrhage">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>248</b></td>
+      <td class="tdData">Tonsillar hypertrophy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tonsillar hypertrophy">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>249</b></td>
+      <td class="tdData">Tonsillectomy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tonsillectomy">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>250</b></td>
+      <td class="tdData">Troponin normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Troponin normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>251</b></td>
+      <td class="tdData">Ultrasound scan abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Ultrasound scan abnormal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>252</b></td>
+      <td class="tdData">Vaccination site lymphadenopathy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vaccination site lymphadenopathy">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>253</b></td>
+      <td class="tdData">Tearfulness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Tearfulness">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>254</b></td>
+      <td class="tdData">Vaccination site swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vaccination site swelling">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>255</b></td>
+      <td class="tdData">Ventricular extrasystoles</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Ventricular extrasystoles">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>256</b></td>
+      <td class="tdData">Vision blurred</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Vision blurred">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>257</b></td>
+      <td class="tdData">Visual impairment</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Visual impairment">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>258</b></td>
+      <td class="tdData">Weight loss poor</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Weight loss poor">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>259</b></td>
+      <td class="tdData">Wheezing</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Wheezing">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>260</b></td>
+      <td class="tdData">White blood cell count</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=White blood cell count">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>261</b></td>
+      <td class="tdData">White blood cell count decreased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=White blood cell count decreased">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>262</b></td>
+      <td class="tdData">White blood cell count normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=White blood cell count normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>263</b></td>
+      <td class="tdData">Injection site mass</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site mass">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>264</b></td>
+      <td class="tdData">Temperature regulation disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Temperature regulation disorder">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>265</b></td>
+      <td class="tdData">Taste disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Taste disorder">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>266</b></td>
+      <td class="tdData">Pregnancy test negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Pregnancy test negative">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>267</b></td>
+      <td class="tdData">Rheumatoid factor negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Rheumatoid factor negative">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>268</b></td>
+      <td class="tdData">Premenstrual syndrome</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Premenstrual syndrome">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>269</b></td>
+      <td class="tdData">Product administered at inappropriate site</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product administered at inappropriate site">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>270</b></td>
+      <td class="tdData">Product administered to patient of inappropriate age</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product administered to patient of inappropriate age">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>271</b></td>
+      <td class="tdData">Product preparation error</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Product preparation error">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>272</b></td>
+      <td class="tdData">Prothrombin time normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Prothrombin time normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>273</b></td>
+      <td class="tdData">Red blood cell sedimentation rate normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Red blood cell sedimentation rate normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>274</b></td>
+      <td class="tdData">Respiratory symptom</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Respiratory symptom">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>275</b></td>
+      <td class="tdData">Respiratory viral panel</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Respiratory viral panel">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>276</b></td>
+      <td class="tdData">Restless legs syndrome</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Restless legs syndrome">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>277</b></td>
+      <td class="tdData">Retching</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Retching">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>278</b></td>
+      <td class="tdData">Sacroiliac joint dysfunction</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Sacroiliac joint dysfunction">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>279</b></td>
+      <td class="tdData">Swollen tongue</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Swollen tongue">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>280</b></td>
+      <td class="tdData">SARS-CoV-2 test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=SARS-CoV-2 test">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>281</b></td>
+      <td class="tdData">Scratch</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Scratch">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>282</b></td>
+      <td class="tdData">Sinusitis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Sinusitis">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>283</b></td>
+      <td class="tdData">Skin burning sensation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Skin burning sensation">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>284</b></td>
+      <td class="tdData">Skin discolouration</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Skin discolouration">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>285</b></td>
+      <td class="tdData">Skin reaction</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Skin reaction">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>286</b></td>
+      <td class="tdData">Small fibre neuropathy</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Small fibre neuropathy">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>287</b></td>
+      <td class="tdData">Snoring</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Snoring">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>288</b></td>
+      <td class="tdData">Stress</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Stress">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>289</b></td>
+      <td class="tdData">Supraventricular tachycardia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Supraventricular tachycardia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>290</b></td>
+      <td class="tdData">Swelling of eyelid</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Swelling of eyelid">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>291</b></td>
+      <td class="tdData">Injection site paraesthesia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site paraesthesia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>292</b></td>
+      <td class="tdData">Antinuclear antibody positive</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Antinuclear antibody positive">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>293</b></td>
+      <td class="tdData">Injection site discolouration</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site discolouration">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>294</b></td>
+      <td class="tdData">Coagulation factor level normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Coagulation factor level normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>295</b></td>
+      <td class="tdData">Body temperature</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Body temperature">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>296</b></td>
+      <td class="tdData">Body temperature decreased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Body temperature decreased">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>297</b></td>
+      <td class="tdData">Bone pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Bone pain">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>298</b></td>
+      <td class="tdData">Bradycardia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Bradycardia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>299</b></td>
+      <td class="tdData">Brain natriuretic peptide</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Brain natriuretic peptide">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>300</b></td>
+      <td class="tdData">Bronchospasm</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Bronchospasm">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>301</b></td>
+      <td class="tdData">C-reactive protein normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=C-reactive protein normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>302</b></td>
+      <td class="tdData">Cardiac disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Cardiac disorder">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>303</b></td>
+      <td class="tdData">Cellulitis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Cellulitis">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>304</b></td>
+      <td class="tdData">Chest scan abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Chest scan abnormal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>305</b></td>
+      <td class="tdData">Computerised tomogram normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Computerised tomogram normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>306</b></td>
+      <td class="tdData">Blood phosphorus</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood phosphorus">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>307</b></td>
+      <td class="tdData">Coombs direct test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Coombs direct test">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>308</b></td>
+      <td class="tdData">COVID-19 immunisation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=COVID-19 immunisation">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>309</b></td>
+      <td class="tdData">Culture throat negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Culture throat negative">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>310</b></td>
+      <td class="tdData">Cutaneous vasculitis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Cutaneous vasculitis">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>311</b></td>
+      <td class="tdData">Cytomegalovirus test negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Cytomegalovirus test negative">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>312</b></td>
+      <td class="tdData">Delivery</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Delivery">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>313</b></td>
+      <td class="tdData">Dermatitis allergic</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dermatitis allergic">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>314</b></td>
+      <td class="tdData">Dysphonia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Dysphonia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>315</b></td>
+      <td class="tdData">Eczema</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Eczema">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>316</b></td>
+      <td class="tdData">Educational problem</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Educational problem">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>317</b></td>
+      <td class="tdData">Blood potassium decreased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood potassium decreased">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>318</b></td>
+      <td class="tdData">Blood lactic acid</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood lactic acid">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>319</b></td>
+      <td class="tdData">Electrocardiogram QRS complex normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Electrocardiogram QRS complex normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>320</b></td>
+      <td class="tdData">Antinuclear antibody negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Antinuclear antibody negative">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>321</b></td>
+      <td class="tdData">Abdominal pain lower</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Abdominal pain lower">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>322</b></td>
+      <td class="tdData">Accidental underdose</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Accidental underdose">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>323</b></td>
+      <td class="tdData">Administration site pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Administration site pain">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>324</b></td>
+      <td class="tdData">Ageusia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Ageusia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>325</b></td>
+      <td class="tdData">Allergy test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Allergy test">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>326</b></td>
+      <td class="tdData">Amnesia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Amnesia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>327</b></td>
+      <td class="tdData">Angina pectoris</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Angina pectoris">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>328</b></td>
+      <td class="tdData">Anosmia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Anosmia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>329</b></td>
+      <td class="tdData">Anti-thyroid antibody</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Anti-thyroid antibody">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>330</b></td>
+      <td class="tdData">Anti-thyroid antibody increased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Anti-thyroid antibody increased">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>331</b></td>
+      <td class="tdData">Anxiety</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Anxiety">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>332</b></td>
+      <td class="tdData">Blood lactate dehydrogenase normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood lactate dehydrogenase normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>333</b></td>
+      <td class="tdData">Aphonia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Aphonia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>334</b></td>
+      <td class="tdData">Aphthous ulcer</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Aphthous ulcer">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>335</b></td>
+      <td class="tdData">Asthma</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Asthma">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>336</b></td>
+      <td class="tdData">Autoimmune disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Autoimmune disorder">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>337</b></td>
+      <td class="tdData">Autoimmune thyroiditis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Autoimmune thyroiditis">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>338</b></td>
+      <td class="tdData">Autonomic nervous system imbalance</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Autonomic nervous system imbalance">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>339</b></td>
+      <td class="tdData">Biopsy skin abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Biopsy skin abnormal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>340</b></td>
+      <td class="tdData">Blood alkaline phosphatase</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood alkaline phosphatase">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>341</b></td>
+      <td class="tdData">Blood calcium</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood calcium">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>342</b></td>
+      <td class="tdData">Blood copper normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood copper normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>343</b></td>
+      <td class="tdData">Blood creatinine increased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Blood creatinine increased">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>344</b></td>
+      <td class="tdData">Electrocardiogram PR interval</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Electrocardiogram PR interval">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>345</b></td>
+      <td class="tdData">Emotional distress</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Emotional distress">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>346</b></td>
+      <td class="tdData">Injection site discharge</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Injection site discharge">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>347</b></td>
+      <td class="tdData">Hypophagia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypophagia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>348</b></td>
+      <td class="tdData">Helicobacter test</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Helicobacter test">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>349</b></td>
+      <td class="tdData">Henoch-Schonlein purpura</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Henoch-Schonlein purpura">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>350</b></td>
+      <td class="tdData">Hepatic enzyme increased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hepatic enzyme increased">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>351</b></td>
+      <td class="tdData">Hepatitis B test negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hepatitis B test negative">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>352</b></td>
+      <td class="tdData">Hepatitis C test negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hepatitis C test negative">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>353</b></td>
+      <td class="tdData">Herpes zoster</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Herpes zoster">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>354</b></td>
+      <td class="tdData">HIV test negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=HIV test negative">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>355</b></td>
+      <td class="tdData">Human chorionic gonadotropin</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Human chorionic gonadotropin">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>356</b></td>
+      <td class="tdData">Hypersomnia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypersomnia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>357</b></td>
+      <td class="tdData">Hypoaesthesia oral</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypoaesthesia oral">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>358</b></td>
+      <td class="tdData">Hypothyroidism</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Hypothyroidism">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>359</b></td>
+      <td class="tdData">Haemorrhage</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Haemorrhage">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>360</b></td>
+      <td class="tdData">Idiopathic urticaria</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Idiopathic urticaria">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>361</b></td>
+      <td class="tdData">Iliotibial band syndrome</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Iliotibial band syndrome">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>362</b></td>
+      <td class="tdData">Illness</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Illness">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>363</b></td>
+      <td class="tdData">Immunosuppression</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Immunosuppression">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>364</b></td>
+      <td class="tdData">Impaired driving ability</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Impaired driving ability">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>365</b></td>
+      <td class="tdData">Incoherent</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Incoherent">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>366</b></td>
+      <td class="tdData">Incorrect route of product administration</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Incorrect route of product administration">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>367</b></td>
+      <td class="tdData">Induction of cervix ripening</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Induction of cervix ripening">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>368</b></td>
+      <td class="tdData">Induration</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Induration">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>369</b></td>
+      <td class="tdData">Influenza virus test negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Influenza virus test negative">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>370</b></td>
+      <td class="tdData">Haptoglobin normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Haptoglobin normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>371</b></td>
+      <td class="tdData">Glossodynia</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Glossodynia">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>372</b></td>
+      <td class="tdData">Epidural injection</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Epidural injection">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>373</b></td>
+      <td class="tdData">Facial pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Facial pain">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>374</b></td>
+      <td class="tdData">Epstein-Barr virus test negative</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Epstein-Barr virus test negative">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>375</b></td>
+      <td class="tdData">Exercise tolerance decreased</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Exercise tolerance decreased">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>376</b></td>
+      <td class="tdData">Exfoliative rash</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Exfoliative rash">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>377</b></td>
+      <td class="tdData">Eye movement disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Eye movement disorder">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>378</b></td>
+      <td class="tdData">Eye pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Eye pain">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>379</b></td>
+      <td class="tdData">Eye swelling</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Eye swelling">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>380</b></td>
+      <td class="tdData">Eyelid function disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Eyelid function disorder">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>381</b></td>
+      <td class="tdData">Eyelid irritation</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Eyelid irritation">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>382</b></td>
+      <td class="tdData">Eyelid pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Eyelid pain">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>383</b></td>
+      <td class="tdData">Facial asymmetry</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Facial asymmetry">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>384</b></td>
+      <td class="tdData">Facial paralysis</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Facial paralysis">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>385</b></td>
+      <td class="tdData">General physical condition abnormal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=General physical condition abnormal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>386</b></td>
+      <td class="tdData">Fear</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Fear">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>387</b></td>
+      <td class="tdData">Feeding disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Feeding disorder">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>388</b></td>
+      <td class="tdData">Feeling of body temperature change</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Feeling of body temperature change">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>389</b></td>
+      <td class="tdData">Fibrin D dimer normal</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Fibrin D dimer normal">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>390</b></td>
+      <td class="tdData">Flatulence</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Flatulence">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>391</b></td>
+      <td class="tdData">Flow cytometry</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Flow cytometry">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>392</b></td>
+      <td class="tdData">Fluid intake reduced</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Fluid intake reduced">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>393</b></td>
+      <td class="tdData">Fluid retention</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Fluid retention">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>394</b></td>
+      <td class="tdData">Gait disturbance</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Gait disturbance">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>395</b></td>
+      <td class="tdData">Gastrointestinal disorder</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Gastrointestinal disorder">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>396</b></td>
+      <td class="tdData">Gastrointestinal pain</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Gastrointestinal pain">1</a> / 488</td>
+    </tr>
+        <tr>
+      <td class="tdData"><b>397</b></td>
+      <td class="tdData">Wrong technique in product usage process</td>
+    <td class="styleLeftColumn"><a href="list.php?vax_date_from=&amp;vax_date_to=&amp;recvdate_from=&amp;recvdate_to=&amp;age_from=20&amp;age_to=29&amp;sex=F&amp;vaccine[]=&amp;state[]=any&amp;vax_manu[]=&amp;vaccine_name[]=COVID19 (COVID19 (MODERNA BIVALENT))&amp;vaccine=COVID19-2&amp;sym=Wrong technique in product usage process">1</a> / 488</td>
+    </tr>
+      </table>
+  
+  <!-- InstanceEndEditable -->
+</div>
+    </td>
+  </tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4869243-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+<!-- InstanceEnd --></html>
