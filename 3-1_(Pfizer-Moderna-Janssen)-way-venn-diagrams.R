@@ -36,7 +36,7 @@ base_dir <- dirname(current_path)
 #####################  Define Output Directory #################################
 ################################################################################
 
-output_dir <- file.path(base_dir, "VennOutput")
+output_dir <- file.path(base_dir, "VennOutput2")
 dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
 ################################################################################
@@ -92,9 +92,44 @@ process_venn_diagrams <- function(file_path, prefix, vaccines) {
     width = 10, height = 8
   )
   
-  # Create Venn diagram using VennDetail
-  three_way_venn <- VennDetail::venndetail(venn_list)
+  # # Create Venn diagram using VennDetail
+  # # Ensure all combinations exist, even if empty
+  # ensure_all_subsets <- function(venn_list) {
+  #   all_names <- names(venn_list)
+  #   all_combinations <- unlist(lapply(1:length(all_names), function(i) {
+  #     combn(all_names, i, simplify = FALSE)
+  #   }), recursive = FALSE)
+  #   
+  #   # Flatten into sets of intersection keys
+  #   present_combos <- lapply(combn(all_names, 1:3, simplify = FALSE), function(combo) {
+  #     Reduce(intersect, venn_list[combo])
+  #   })
+  #   
+  #   # Add a dummy entry for missing combinations
+  #   dummy_prefix <- "__dummy__"
+  #   counter <- 1
+  #   for (combo in all_combinations) {
+  #     combo_sets <- venn_list[combo]
+  #     intersection <- Reduce(intersect, combo_sets)
+  #     if (length(intersection) == 0) {
+  #       # Add a fake unique dummy value to each source set
+  #       dummy_val <- paste0(dummy_prefix, counter)
+  #       for (name in combo) {
+  #         venn_list[[name]] <- c(venn_list[[name]], dummy_val)
+  #       }
+  #       counter <- counter + 1
+  #     }
+  #   }
+  #   return(venn_list)
+  # }
   
+  # Apply patch
+  venn_list_padded <- ensure_all_subsets(venn_list)
+  three_way_venn <- VennDetail::venndetail(venn_list_padded)
+  
+  # # Create a custom function to plot the Venn diagram
+  # three_way_venn <- VennDetail::venndetail(venn_list, force.unique = TRUE)
+  # 
   pdf(file.path(output_dir, paste0(prefix, "_VennDiagram_VennDetail.pdf")), width = 10, height = 8)
   plot(
     three_way_venn,
@@ -136,3 +171,6 @@ files <- list(
 for (file_name in names(files)) {
   process_venn_diagrams(files[[file_name]], file_name, c("PFIZER", "MODERNA", "JANSSEN"))
 }
+
+
+process_venn_diagrams(files[[file_name]], file_name, c("PFIZER", "MODERNA", "JANSSEN"))
