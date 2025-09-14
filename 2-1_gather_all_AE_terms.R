@@ -1,8 +1,26 @@
-# Load necessary libraries
-library(readxl)  # For reading Excel files
-library(dplyr)   # For data manipulation
-library(writexl) # For writing Excel files
+################################################################################
+# This script gathers all unique AE terms from multiple Excel files and sheets,
+# and flags those that are present in a predefined administrative list or match
+# specific patterns (e.g., ending with "test", "normal", or "negative").
+#
+################################################################################
 
+################################################################################
+# Set the current working directory
+################################################################################
+library(rstudioapi) # make sure you have it installed
+base_dir <- dirname(getActiveDocumentContext()$path)
+setwd(base_dir)
+
+################################################################################
+## Load required packages
+################################################################################
+if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman")
+pacman::p_load(readxl, dplyr, writexl)
+
+################################################################################
+# Main script
+################################################################################
 # Set the directory containing the Excel files
 input_directory <- "./excel_output"
 
@@ -60,10 +78,10 @@ all_ae_terms_df$Flag <- ifelse(
 )
 
 # Save the list of unique AE terms as an Excel file
-write_xlsx(all_ae_terms_df, "Unique_AE_Terms_List.xlsx")
+write_xlsx(all_ae_terms_df, "Unique_AE_Terms/Unique_AE_Terms_List.xlsx")
 
 # Print message indicating completion
-cat("AE terms from all Excel files and sheets have been collected and saved to 'Unique_AE_Terms_List.xlsx'.\n")
+cat("AE terms from all Excel files and sheets have been collected and saved to 'Unique_AE_Terms/Unique_AE_Terms_List.xlsx'.\n")
 
 # It is highly recommended to go through this resulting Excel file
 # for further manual curation as needed. 

@@ -1,2 +1,4 @@
 archive/
 FrontiersPaperSupplementary/
+renv/library/
+renv/staging/
