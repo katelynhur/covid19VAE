@@ -1,7 +1,7 @@
 # Profiling COVID-19 Vaccine Adverse Events Using VAERS Case Reports: What Has Changed Since 2021?
 
 ## Authors and Affiliations
-- **Anna He**<sup>1,\*</sup>, **Katelyn Hur**<sup>2,\*</sup>, **Xingxian Li**<sup>3</sup>, **Jie Zheng**<sup>3</sup>, **Junguk Hur**<sup>4,$</sup>, **Yongqun He**<sup>3,$</sup>  
+- **Anna He**<sup>1,\*</sup>, **Katelyn Hur**<sup>2,\*</sup>, **Xingxian Li**<sup>3</sup>, **Jie Zheng**<sup>3</sup>, **Junguk Hur**<sup>4,\$</sup>, and **Yongqun He**<sup>3,\$</sup>  
 <sup>1</sup> Huron High School, Ann Arbor, Michigan  
 <sup>2</sup> Red River High School, Grand Forks, North Dakota  
 <sup>3</sup> University of Michigan, Ann Arbor, Michigan  
@@ -57,5 +57,27 @@ This script automates what would otherwise be a manual, time-intensive download 
 - Click **Source** or run line-by-line to execute the workflow.  
 
 These scripts perform data processing, statistical analyses, and generate visualizations to reproduce results and figures presented in the manuscript.
+
+## R Scripts
+
+### Environment (after cloning)
+To reproduce the exact package set used in this project:
+
+    install.packages("renv")
+    renv::restore()   # installs CRAN + Bioconductor versions recorded in renv.lock
+
+(Each script also uses `pacman::p_load()` to auto-install missing packages, but `renv` ensures consistent versions across machines.)
+
+### Scripts and purpose
+- **`2-1_gather_all_AE_terms.R`** — Scans all Excel workbooks/sheets to collect unique adverse event (AE) terms, flags admin/pattern-matched terms, and writes `Unique_AE_Terms_List.xlsx`.
+- **`2-2_trim_AE-terms.R`** — Loads curated AE lists, reports conflicts, and removes flagged terms from every workbook/sheet. Saves trimmed workbooks to `trimmed_excel_output/` and an Excel summary report.
+- **`3-1_(Pfizer-Moderna-Janssen)-way-venn-diagrams.R`** — Produces 3-set Venn comparisons of AE sets for Pfizer, Moderna, and Janssen. Exports figures and the corresponding intersection tables.
+- **`3-2_mono-vs-bivalent-covid-vaccines_v2.R`** — Compares monovalent vs bivalent AE sets for Pfizer and for Moderna (two 2-way Venns) plus a combined 4-way comparison. Saves PDFs and an Excel file with joined intersection details.
+- **`3-3-5-way-venn-diagram.R`** — Builds 5-set Venn/UpSet visuals for Pfizer (mono & bi), Moderna (mono & bi), and Janssen using ggVennDiagram/VennDetail/UpSetR. Writes multiple plot variants and a combined intersection workbook.
+- **`4-2_gender_and_age_filtered_v2.4.R`** — Reads VaxAFE age/sex-stratified Excel outputs, extracts target AEs, computes AE percentages, and produces per-event Female vs Male line plots across age groups. Outputs plots to `top_age_vs_gender_output/` and `top_gender_extracted_data.xlsx`.
+
+### Suggested run order
+`2-1_gather_all_AE_terms.R` → `2-2_trim_AE-terms.R` → `3-1_(Pfizer-Moderna-Janssen)-way-venn-diagrams.R` → `3-2_mono-vs-bivalent-covid-vaccines_v2.R` → `3-3-5-way-venn-diagram.R` → `4-2_gender_and_age_filtered_v2.4.R`
+
 
 ---
