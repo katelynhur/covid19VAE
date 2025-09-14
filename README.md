@@ -1,7 +1,7 @@
 # Profiling COVID-19 Vaccine Adverse Events Using VAERS Case Reports: What Has Changed Since 2021?
 
 ## Authors and Affiliations
-- **Anna He**<sup>1,*</sup>, **Katelyn Hur**<sup>2,*</sup>, **Xingxian Li**<sup>3</sup>, **Jie Zheng**<sup>3</sup>, **Junguk Hur**<sup>4,$</sup>, **Yongqun He**<sup>3,$</sup>  
+- **Anna He**<sup>1,\*</sup>, **Katelyn Hur**<sup>2,\*</sup>, **Xingxian Li**<sup>3</sup>, **Jie Zheng**<sup>3</sup>, **Junguk Hur**<sup>4,$</sup>, **Yongqun He**<sup>3,$</sup>  
 <sup>1</sup> Huron High School, Ann Arbor, Michigan  
 <sup>2</sup> Red River High School, Grand Forks, North Dakota  
 <sup>3</sup> University of Michigan, Ann Arbor, Michigan  
@@ -12,7 +12,10 @@
 ---
 
 ## Abstract
-COVID-19 vaccines have been pivotal in reducing severe illness and death during the pandemic, but adverse events (AEs) remain a critical component of safety surveillance. In 2022, we published the first systematic profiling of COVID-19 vaccine AEs using the VAERS database. Since then, new vaccine formulations, including bivalent versions, have been introduced. This updated analysis incorporates VAERS data through June 2024 to provide a comprehensive assessment of evolving safety trends. We found that the overall number and severity of AEs decreased over time for Pfizer and Moderna vaccines, while Janssen showed a smaller reduction. Importantly, bivalent formulations demonstrated safer profiles, with no significant associations with rare but serious AEs such as myocarditis, thrombosis, or Guillain-Barré syndrome. Stratified analyses revealed that females were more likely to report common, non-serious AEs, whereas males were more frequently associated with severe, clinically significant AEs, particularly those affecting the cardiovascular system. These findings highlight the importance of ongoing, stratified safety monitoring to guide vaccine recommendations and risk communication.
+**Background**: COVID-19 vaccines have been pivotal in reducing severe illness and death during the pandemic, but adverse events (AEs) remain a critical aspect of safety surveillance. In 2022, we reported the first systematic profiling of COVID-19 vaccine AEs using the Vaccine Adverse Event Reporting System (VAERS). Since then, vaccines have evolved with the introduction of bivalent formulations. This study provides an updated and expanded analysis to capture these evolving safety trends. <br>
+**Methods**: Building upon our previous analysis of AE profiles, we systematically analyzed AE profiles for Pfizer, Moderna, and Janssen vaccines, along with the newer bivalent Pfizer and Moderna vaccines and the protein subunit Novavax vaccine, using VAERS data through June 28, 2024. <br>
+**Results**: We observed a marked decrease in unique AEs reported for the Pfizer and Moderna vaccines, with an even greater reduction for Janssen. The bivalent versions of Pfizer and Moderna exhibited distinct AE profiles compared to their corresponding monovalent counterparts, though both remained generally safe. Significant differences were observed in thrombosis and myocarditis across the vaccines. Children aged 0-9 were more susceptible to AEs, and sex differences were evident. Females reported more common, general AEs, while males were more often linked to serious AEs, such as thrombosis, myocarditis, and Guillain-Barré syndrome. Ontology-based classification revealed that females were more likely to experience sensory-related AEs, whereas males were more prone to cardiovascular-related AEs. <br>
+**Conclusion**: The current generation of COVID-19 vaccines appears to have safer profiles than earlier formulations, with new insights into age- and sex-specific AE patterns.  <br>
 
 ---
 
