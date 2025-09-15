@@ -150,6 +150,7 @@ plot_adverse_event <- function(event) {
   max_y <- ceiling(suppressWarnings(max(event_data$Percentage, na.rm = TRUE)))
   if (!is.finite(max_y)) max_y <- 1
   
+  # Build individual panels
   plots <- lapply(manufacturer_levels, function(mfg) {
     df <- event_data %>%
       dplyr::filter(Manufacturer == mfg) %>%
@@ -164,7 +165,7 @@ plot_adverse_event <- function(event) {
       dplyr::ungroup()
     
     ggplot2::ggplot(df, ggplot2::aes(x = Age_Group, y = Percentage, group = Gender, color = Gender)) +
-      ggplot2::geom_line(data = line_df, linewidth = 1.5) +  # avoids 1-point line warnings
+      ggplot2::geom_line(data = line_df, linewidth = 1.5) +
       ggplot2::geom_point(size = 4) +
       ggplot2::scale_x_discrete(drop = FALSE) +
       ggplot2::scale_color_manual(values = gender_colors) +
@@ -182,8 +183,17 @@ plot_adverse_event <- function(event) {
       )
   })
   
-  line_plot <- patchwork::wrap_plots(plots, ncol = 5) +
-    patchwork::plot_layout(ncol = 5) +
+  # One legend per row, placed on the RIGHT
+  ncols <- 5
+  row_groups <- split(plots, ceiling(seq_along(plots) / ncols))
+  row_patchworks <- lapply(row_groups, function(row_plots) {
+    patchwork::wrap_plots(row_plots, ncol = ncols) +
+      patchwork::plot_layout(ncol = ncols, guides = "collect") &
+      ggplot2::theme(legend.position = "right")
+  })
+  
+  # Stack rows vertically
+  line_plot <- Reduce(`/`, row_patchworks) +
     patchwork::plot_annotation(
       title = event,
       theme = ggplot2::theme(
@@ -202,6 +212,7 @@ plot_adverse_event <- function(event) {
     plot = line_plot, width = 18, height = 4, device = cairo_pdf
   )
 }
+
 
 ################################################################################
 ################################  Run Jobs  ####################################
